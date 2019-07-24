@@ -1,0 +1,9 @@
+* {
+    margin:0;
+    padding:0;
+    }
+#container{width:800px;height:auto;margin-left:auto;margin-right:auto;}  
+#up-container{margin-top:10px;}
+#left-panel{height:400px;background-color: #f2f2f2;width:75%;float:left;}
+#right-panel{height:400px;background-color:#ccccff;width:25%;float:right;}
+#bottom-panel{height:200px;background-color:#ffe6ff;width:100%;float:bottom;}
