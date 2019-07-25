@@ -1,0 +1,7 @@
+*{
+    margin:0; padding:0;
+}
+
+.container1{background-color:grey;width:50%;height:300px;}
+.container2{background-color:goldenrod;width:70%;height:300px;}
+.container3{background-color:grey;height:20%;width:300px;}
