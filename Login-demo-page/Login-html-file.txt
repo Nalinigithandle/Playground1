@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title> LOGIN_DEMO </title>
+<link rel="stylesheet" type="text/css" href="Login-demo.css";>
+</head>
+
+<body>
+<div id= "c1">
+    <div id= "c2">
+        <div id= "c3">
+            <span><br><br> <b>LOGIN</b> </span>
+        </div>
+        
+        <div id=  "c4">
+            <br><br> <span> <b>Email or Username</b> </span>
+            <br> <input type= "Email or Username">
+            <br><br> <span> <b>Password</b> </span>
+            <br> <input type= "password">
+            <div id= "c5"></div>
+            <br> <input type= "checkbox"> <span>Remember me</span>
+            <a href= "Forgot password.html">Forgot password</a>
+            </div>
+            
+            <div id= "c6">
+                <br><br> <button type= "button">LOGIN</button>
+            </div>
+
+
+    </div>
+    
+    
+</div>
+</body>
+</html>
