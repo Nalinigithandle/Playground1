@@ -17,7 +17,7 @@
 
 #c3{height:274px; width:184px; background-color: whitesmoke; margin-top:5%; 
      margin-bottom:5%; margin-left:7%; margin-right: 32%;
-      border: solid rgb(187, 197, 230); border-width:1px; box-shadow: 1px 0px 0px gray; }
+      border: solid rgb(187, 197, 230); border-width:1px; box-shadow: 1px 1px 5px 1px rgb(165, 164, 164); }
 
  #c4{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:16px; 
           color: rgb(99, 92, 92); margin-left:10px; padding:18px;}
