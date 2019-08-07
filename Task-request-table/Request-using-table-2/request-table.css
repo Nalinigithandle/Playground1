@@ -1,0 +1,175 @@
+*{
+    margin:0;padding:0;
+}
+
+#background{
+  width:100%;
+  height:1044px;
+  background-color:#F6F8F9;
+}
+
+#header{
+    width:100%;
+    height:60px;
+    background-color:#FFFFFF;
+    box-shadow: 0px 0px 4px #000000;
+    
+}
+
+#f1{
+    position:absolute;
+    top:17px;
+    left:25px;
+    
+   }
+
+#f2{
+    position:absolute;
+    width:150px;
+    height:30px;
+    background:#FFFFFF;
+    margin-left:90%;
+    margin-top:20px;
+    
+
+}
+
+#req{
+    
+    margin:auto;
+    width:90%;
+    height:115.2px;
+    background:#FFFFFF;
+    border: 1px solid  rgb(199, 179, 179);
+    border-bottom: 4px solid rgb(199, 179, 179);
+    margin-top:25px;
+    
+}
+
+#my-req{
+    position:relative;
+    height:27px;
+    width:90px;
+    background:#FFFFFF;
+    border-bottom:4px solid #32BDD2; 
+    margin-left:5%;
+    margin-top:4%;
+
+}
+
+#search{
+    position:absolute;
+    margin-left:30%;
+    margin-top:-30px;
+    
+
+}
+
+#button-box{
+    position:absolute;
+    width:150px;
+    height:30px;
+    background:#FFFFFF;
+    margin-left:78%;
+    margin-top:-43px;
+}
+
+input[type="text"]{
+    border-radius:20px;
+    padding: 5px;
+
+}
+
+#search input{
+    border-style:ridge;
+    border-radius:50px;
+    display:block;
+    box-sizing:border-box;
+    width:400px;
+    height:30px;
+}
+
+#search img{
+    top:35px;
+    right:10px;
+    position:absolute;
+    
+}
+
+button{
+    background:#32BDD2;
+    height:42px;
+    width:130px;
+    border-radius: 20px;
+    
+}
+
+#filter{
+    margin:auto;
+    width:90%;
+    height:90px;
+    background:#FFFFFF;
+    border: 1px solid  rgb(199, 179, 179);
+
+
+}
+
+#filter-f{
+    
+    margin-left: 60px;
+    margin-top: 15px;
+    
+}
+
+
+
+
+#circle{
+    border-radius:50%;
+    height:10px;
+    width:10px;
+    display: inline-block;
+}
+
+#data{
+    margin:auto;
+    width:90%;
+    border: 1px solid grey;
+    
+}
+
+#table, td{
+    
+    
+    margin:auto;
+    width:48%;
+    padding-left:43px;
+    padding-right:43px;
+    text-align: left;
+    background:#FFFFFF;
+    border-bottom:1px solid grey;
+
+}
+
+#Footer{
+    
+    margin:auto;
+    width:90%;
+    height:60px;
+    background:#FFFFFF;
+    border:1px solid grey;
+
+
+}
+
+#last{
+    margin-left:45%;
+    margin-top:2%;
+}
+
+#arrow{
+
+    margin-left:54%;
+    margin-top:-2.8%;
+
+}
