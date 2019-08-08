@@ -1,11 +1,11 @@
 *{
-    margin:0; padding:0;
+    margin:0; padding:0;box-sizing:border-box;
 }
 
 #main{
     margin:auto;
     width:80%;
-    height:400px;
+    height:550px;
     background: whitesmoke;
     border-radius: 10px;
     box-shadow: 2px 3px 7px 2px rgb(165, 162, 162);
