@@ -1,0 +1,39 @@
+*{ margin:0; padding:0; box-sizing: border-box;}
+
+.n1{
+    width:10%;
+    float:left;
+    border: 1px solid green;
+}
+
+.n2{
+    width:90%;
+    float:right;
+    border: 1px solid red;
+    
+}
+
+.lineicon{
+    width:24px;
+    height:24px;
+    float:left;
+}
+
+.picture1{
+    width:20px;
+    height:20px;
+
+}
+
+
+
+.downarrow{
+    width:20px;
+    height:20px;
+}
+.flex{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-end;
+}
