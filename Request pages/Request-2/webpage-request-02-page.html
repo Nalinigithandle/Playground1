@@ -1,137 +1,123 @@
 <!DOCTYPE html>
-<html lang= "en">
-    <head>
-        <title> webpage-request-02 </title>
-        <link rel= "stylesheet" type= "text/css" href= "webpage-request-02-page.css">
-    </head>
+<html lang="en">
 
-    <body>
+<head>
+    <title> Request01 </title>
+    <link rel="stylesheet" type="text/css" href="webpage-request-02-page.css">
+</head>
 
-        <div id= "background">
+<body>
+    <div id="header">
+        <div id="left-box">
+            <img src="lineicon.png" width="24px" height="24px">
+        </div>
+        <div id="right-box">
+            <div><img id="pic1" src="picture1.png" width="24px" height="24px"></div>
+            <div><span> John Doe </span></div>
+            <div><img src="downarrow-icon.png" width="10px" height="10px"></div>
+        </div>
+    </div>
 
-            <div id= "header">
-                <div id= "f1">
-                    <img src= "lineicon.png" width= "35" height= "30">
-                </div>
+    <div id="box1">
+        <div id="req-box">
+            <p> My Requests </p>
+        </div>
+        <div id="req-search">
+            <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search">
+            <img src='search-icon.png' width="25" height="25" alt="search-image">
+        </div>
+        <div id="req-button">
+            <button>NEW REQUEST</button>
+        </div>
+    </div>
 
-                <div id= "f2">
-                   <span> <img src= "picture1.png" width= "23" height= "17" border-radius= "20"> &nbsp
-                          JohnDoe &nbsp<img src= "downarrow-icon.png"  width= "15" height= "10" > </span>
-                </div>
-
-
+    <div id="box2">
+        <div id="fx">
+            <div>
+                <img src="filter-icon.png" width="35px" height="35px">
             </div>
-
-            <div id= "req">
-                <div id= "my-req">
-                    <p style= "font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#505050; font-size:15px;"> <b>My Requests </b></p>
-                </div>
-
-                <div id= "search">
-                    <input type= "text" placeholder= "search" name= "" size= "50">
-                    <img src= "search-icon.png" width= "20" height= "20" id= "search">
-                </div>
-                
-                <div>
-                <button type="button" style= "color:white;"> NEW REQUEST </button>
-                </div>
-            </div>
-
-            <div id= "filter">
-                <div id= "filter-flex">
-                <img src= "filter-icon.png" width= "30" height= "30">
-                <div>
-                <p style= "font-family:Verdana, Geneva, Tahoma, sans-serif;color:#5A5A5A; font-size:13px;">FILTER</p>
-                <p style= "font-family: monospace;color:#909090;font-size:10px;">You have not applied any filter.</p>
-                </div>
-                </div>
-            </div>
-
-            <div id= "data1">
-                    
-                <div>
-                <p style= "font-family:monospace;color:#5A5A5A;"> <b>PUR - 2019 - 056 </b></p>
-                <p style= "font-family:monospace;color:#5A5A5A;"> <sub>submitted on </sub></p>
-                <p style= "font-family:monospace;color:#5A5A5A;"><b>06 Jul 2019 </b></p>
-                </div>
-                            
-                <div>
-                <img src="bell-icon.png" width="90" height="70">
-                </div>
-                
-                <div>
-                <span style= "font-family:monospace;color:#5A5A5A;"> AWAITING APPROVAL </span>
-                <span id="circle" style="background: yellow"></span>
-                </div>
-            </div>
-
-            <div id= "data2">
-                   
-                <div>
-                <p style= "font-family:monospace;color:#5A5A5A;"> <b>PUR - 2019 - 056 </b></p>
-                <p style= "font-family:monospace;color:#5A5A5A;"> <sub>submitted on </sub></p>
-                <p style= "font-family:monospace;color:#5A5A5A;"><b>06 Jul 2019 </b></p>
-                </div>
-                                
-                <div>
-                 <img src="bell-icon.png" width="90" height="70">
-                 </div>
-                    
-                <div>
-                <span style= "font-family:monospace;color:#5A5A5A;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp APPROVED </span>
-                <span id="circle" style="background: #24D081"></span>
-                </div>
-            </div>
-
-
-            <div id= "data3">
-                    
-                <div>
-                <p style= "font-family:monospace;color:#5A5A5A;"> <b>PUR - 2019 - 056 </b></p>
-                <p style= "font-family:monospace;color:#5A5A5A;"> <sub>submitted on </sub></p>
-                <p style= "font-family:monospace;color:#5A5A5A;"><b>06 Jul 2019 </b></p>
-                </div>
-                                    
-                <div>
-                <img src="bell-icon.png" width="90" height="70">
-                </div>
-                        
-                <div>
-                <span style= "font-family:monospace;color:#5A5A5A;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp DRAFT </span>
-                <span id="circle" style="background:#D0C824;"></span>
-                </div>
-            </div>
-
-            <div id= "data4">
-                    
-                    <div>
-                    <p style= "font-family:monospace;color:#5A5A5A;"> <b>PUR - 2019 - 056 </b></p>
-                    <p style= "font-family:monospace;color:#5A5A5A;"> <sub>submitted on </sub></p>
-                    <p style= "font-family:monospace;color:#5A5A5A;"><b>06 Jul 2019 </b></p>
-                    </div>
-                                        
-                    <div>
-                    <img src="bell-icon.png" width="90" height="70">
-                    </div>
-                            
-                    <div>
-                    <span style= "font-family:monospace;color:#5A5A5A;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp REJECTED </span>
-                    <span id="circle" style="background:#D03E24;"></span>
-                    </div>
-            </div>
-
-            <div id= "Footer">
-                <p style= "font-family:Verdana, Geneva, Tahoma, sans-serif;color:#5A5A5A; font-size:13px;">SHOW MORE</p>&nbsp&nbsp
-                <img src= "downarrow-icon.png" width= "15" height= "15">
+            <div>
+                <p style="font-size:12px">FILTER </p>
+                <p style="font-size:10px;color:grey;">Showing approved requests</p>
             </div>
         </div>
- 
+    </div>
 
+    <div style="font-family:monospace;color:#5A5A5A" id="box3">
+        <div>
+            <p><b>PUR-2019-056 </b></p>
+            <br>
+            <p> submitted on </p>
+            <p> <b>06 Jul 2019</b> </p>
+        </div>
+        <div id="b1">
+            <img src="bell-icon.png" width="30px" height="30px">
+        </div>
 
+        <div>
+            <span style="font-family:monospace;color:#5A5A5A"> APPROVED</span>
+            <span id="circle" style="background:#24D081;"></span>
+        </div>
 
-        
+    </div>
 
+    <div style="font-family:monospace;color:#5A5A5A" id="box4">
+        <div>
+            <p><b>PUR-2019-056 </b></p>
+            <br>
+            <p> submitted on </p>
+            <p> <b>06 Jul 2019</b> </p>
+        </div>
+        <div id="b2">
+            <img src="bell-icon.png" width="30px" height="30px">
+        </div>
 
-    
-    </body>
+        <div>
+            <span style="font-family:monospace;color:#5A5A5A"> APPROVED </span>
+            <span id="circle" style="background:#24D081"></span>
+        </div>
+
+    </div>
+
+    <div style="font-family:monospace;color:#5A5A5A" id="box5">
+        <div>
+            <p><b>PUR-2019-056 </b></p>
+            <br>
+            <p> submitted on </p>
+            <p> <b>06 Jul 2019</b> </p>
+        </div>
+        <div id="b3">
+            <img src="bell-icon.png" width="30px" height="30px">
+        </div>
+
+        <div>
+            <span style="font-family:monospace;color:#5A5A5A"> APPROVED </span>
+            <span id="circle" style="background:#24D081"></span>
+        </div>
+
+    </div>
+    <div style="font-family:monospace;color:#5A5A5A" id="box6">
+        <div>
+            <p><b>PUR-2019-056 </b></p>
+            <br>
+            <p> submitted on </p>
+            <p> <b>06 Jul 2019</b> </p>
+        </div>
+        <div id="b4">
+            <img src="bell-icon.png" width="30px" height="30px">
+        </div>
+
+        <div>
+            <span style="font-family:monospace;color:#5A5A5A"> APPROVED </span>
+            <span id="circle" style="background:#24D081"></span>
+        </div>
+
+    </div>
+
+    <div id="box7">
+        <span style=" font-size:12px;color:#5A5A5A"> SHOW MORE </span>
+        &nbsp&nbsp <span><img src="downarrow-icon.png" width="15px" height="15px">
+    </div>
+</body>
+
 </html>
