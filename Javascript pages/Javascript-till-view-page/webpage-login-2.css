@@ -30,10 +30,11 @@
 }
 
 #login-box{
-    height: 20px;
-    width: 52px;
+    height: 25px;
+    width: 9%;
     background:#FFFFFF;
     border-bottom:3px solid #595959;
+    
 }
 
 #text{
@@ -67,7 +68,7 @@
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-    width:18%;
+    width:15%;
 
 }
 
@@ -90,8 +91,11 @@
 }
 
 #link{
-    height: 17px;
+    height: 20px;
     width: 75px;
     border-bottom:2px solid #595959;
 
+}
+#link a{
+    text-decoration: none;
 }
