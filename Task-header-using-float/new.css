@@ -22,12 +22,13 @@
 .picture1{
     width:24px;
     height:24px;
+    border-radius:20px;
 
 }
 
 
 
 .downarrow{
-    width:20px;
-    height:20px;
+    width:10px;
+    height:10px;
 }

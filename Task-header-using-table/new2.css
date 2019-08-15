@@ -21,6 +21,7 @@
 .picture1{
     width:24px;
     height:24px;
+    border-radius:20px;
 }
 
 .downarrow{
@@ -29,9 +30,12 @@
     
 }
 table{
-    width:13%;
-    float:right;
+    width:100%;
     text-align:end;
+}
+
+td{
+    width:100%;
 }
 
 

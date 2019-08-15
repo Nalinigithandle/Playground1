@@ -1,5 +1,5 @@
 *{
-    margin:0;padding:0;
+    margin:0;padding:0; box-sizing: border-box;
 }
 
 #background{
@@ -13,6 +13,7 @@
     height:60px;
     background-color:#FFFFFF;
     box-shadow: 0px 0px 4px #000000;
+    
     
 }
 
@@ -43,6 +44,7 @@
     border: 1px solid  rgb(199, 179, 179);
     border-bottom: 4px solid rgb(199, 179, 179);
     margin-top:25px;
+    padding-left:1%;
     
 }
 
@@ -115,9 +117,13 @@ button{
 }
 
 #filter-flex{
-    
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
     margin-left: 60px;
-    margin-top: 15px;
+    height:90px;
+    width:18%;
     
 }
 
@@ -177,20 +183,20 @@ margin-top:1.5%;
     margin-top:1.5%;
     }
 
-    #b2{
-        position:absolute;
-        margin-left:40%;
-        margin-top:-30px;
+#b2{
+     position:absolute;
+    margin-left:40%;
+    margin-top:-30px;
     
     }
     
-    #r2{
-        position:absolute;
-        width:150px;
-        height:30px;
-        background:#FFFFFF;
-        margin-left:75%;
-        margin-top:-10px;
+ #r2{
+    position:absolute;
+    width:150px;
+     height:30px;
+    background:#FFFFFF;
+     margin-left:75.5%;
+     margin-top:-10px;
     
     }
 
@@ -231,7 +237,7 @@ margin-top:1.5%;
         width:150px;
         height:30px;
         background:#FFFFFF;
-        margin-left:75%;
+        margin-left:76%;
         margin-top:-10px;
     
     }
@@ -265,7 +271,7 @@ margin-top:1.5%;
         width:150px;
         height:30px;
         background:#FFFFFF;
-        margin-left:75%;
+        margin-left:76%;
         margin-top:-10px;
     
     }
@@ -290,4 +296,8 @@ margin-top:1.5%;
     margin-left:52%;
     margin-top:-2.8%;
 
+}
+
+#pic1{
+    border-radius:10px;
 }
