@@ -31,7 +31,7 @@
 
 #login-box{
     height: 25px;
-    width: 9%;
+    width: 11%;
     background:#FFFFFF;
     border-bottom:3px solid #595959;
     
@@ -68,7 +68,7 @@
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-    width:15%;
+    width:20%;
 
 }
 
@@ -77,7 +77,7 @@
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-    width:22%;
+    width:25%;
 
 }
 
@@ -86,7 +86,7 @@
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-    width:22%;
+    width:25%;
 
 }
 
