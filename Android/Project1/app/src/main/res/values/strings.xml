@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Project1</string>
+    <string name="burgerimage">burgerimage</string>
+    <string name="john">John</string>
+    <string name="requisition">REQUISITION</string>
+    <string name="note">NOTE</string>
+    <string name="ipsum_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis, tortor sit amet
+        tempor vehicula.
+    </string>
+    <string name="request_type">REQUEST TYPE</string>
+    <string name="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis, tortor sit amet
+        tempor vehicula.
+    </string>
+    <string name="self">SELF</string>
+    <string name="team_department_branch">TEAM/DEPARTMENT/BRANCH</string>
+    <string name="someone_else">SOMEONE ELSE</string>
+    <string name="next"><![CDATA[NEXT ->]]></string>
+    <string name="save_draft">SAVE DRAFT</string>
+    <string name="profilepicture">profilepicture</string>
+    <string name="dropdownarrow">dropdownarrow</string>
+    <string name="todo">TODO</string>
+</resources>

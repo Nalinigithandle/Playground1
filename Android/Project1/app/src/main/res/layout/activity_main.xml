@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".MainActivity"
+                                                   android:visibility="visible">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="411dp"
+            android:layout_height="61dp"
+
+            app:layout_constraintTop_toTopOf="parent" android:visibility="visible" android:id="@+id/C1"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="18dp" app:layout_constraintBottom_toTopOf="@+id/C2"
+            app:layout_constraintHorizontal_bias="1.0" android:background="#F1F5F5">
+
+        <ImageView
+                android:layout_width="51dp"
+                android:layout_height="29dp" app:srcCompat="@drawable/lineicon"
+                android:id="@+id/burger_icon" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="7dp"
+                android:layout_marginStart="7dp" android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                android:layout_marginEnd="238dp" android:layout_marginRight="238dp"
+                android:contentDescription="@string/burgerimage"/>
+        <TextView
+                android:text="@string/john"
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:id="@+id/Name" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="25dp" android:layout_marginLeft="246dp" android:layout_marginStart="246dp"
+                app:layout_constraintStart_toEndOf="@+id/burger_icon" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="48dp" android:layout_marginRight="48dp" android:layout_marginBottom="17dp"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.814"
+                app:layout_constraintVertical_bias="1.0"/>
+        <ImageView
+                android:layout_width="23dp"
+                android:layout_height="26dp" app:srcCompat="@drawable/Picture1"
+                android:id="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="18dp" android:layout_marginLeft="238dp" android:layout_marginStart="238dp"
+                app:layout_constraintStart_toEndOf="@+id/burger_icon" android:layout_marginBottom="17dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:contentDescription="@string/profilepicture"/>
+        <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp" app:srcCompat="@android:drawable/arrow_down_float"
+                android:id="@+id/imageView10" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="21dp" android:layout_marginLeft="9dp" android:layout_marginStart="9dp"
+                app:layout_constraintStart_toEndOf="@+id/Name" android:layout_marginBottom="17dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:contentDescription="@string/dropdownarrow"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="76dp"
+            android:layout_height="625dp"
+            android:id="@+id/C2" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="15dp" android:layout_marginStart="15dp" android:layout_marginTop="2dp"
+            app:layout_constraintTop_toBottomOf="@+id/C1" app:layout_constraintEnd_toStartOf="@+id/C3"
+            android:layout_marginBottom="25dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.058">
+        <TextView
+                android:text="@string/requisition"
+                android:layout_width="190dp"
+                android:layout_height="133dp"
+                android:id="@+id/requisition"
+                android:textSize="14sp" android:rotation="-90" android:textColor="#111011"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="492dp" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintVertical_bias="0.0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="301dp"
+            android:layout_height="625dp"
+            android:id="@+id/C3" android:layout_marginTop="21dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/C1" app:layout_constraintStart_toEndOf="@+id/C2"
+            android:layout_marginEnd="16dp" android:layout_marginRight="16dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="25dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0" android:background="#ECEDEE">
+        <TextView
+                android:text="@string/note"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:id="@+id/heading" android:textSize="18sp"
+                android:textColorHint="#1A1818" android:textColor="#090808" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="28dp" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="573dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="225dp"
+                android:layout_marginRight="225dp" app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+                android:text="@string/ipsum_text"
+                android:layout_width="263dp"
+                android:layout_height="18dp"
+                android:id="@+id/Lorem" android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="546dp"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="61dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginEnd="7dp" android:layout_marginRight="7dp"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+                android:layout_width="223dp"
+                android:layout_height="27dp"
+                android:id="@+id/textView8" android:text="@string/request_type"
+                android:textColor="#090808" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="232dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="360dp"
+                android:layout_marginEnd="60dp" android:layout_marginRight="60dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+                app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"/>
+        <TextView
+                android:text="@string/lorem_text"
+                android:layout_width="273dp"
+                android:layout_height="16dp"
+                android:id="@+id/textView9" android:textSize="12sp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="12dp" android:layout_marginRight="12dp"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="268dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="344dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp" app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintVertical_bias="0.0"/>
+        <RadioButton
+                android:text="@string/self"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton2" android:textSize="15sp"
+                android:textColor="#615A61" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="362dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="231dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp" android:layout_marginEnd="217dp" android:layout_marginRight="217dp"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        <RadioButton
+                android:layout_width="251dp"
+                android:layout_height="25dp"
+                android:id="@+id/radioButton3"
+                android:text="@string/team_department_branch" android:textSize="15sp" android:textColor="#6B6467"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="404dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="196dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp" android:layout_marginEnd="34dp" android:layout_marginRight="34dp"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        <RadioButton
+                android:text="@string/someone_else"
+                android:layout_width="207dp"
+                android:layout_height="36dp"
+                android:id="@+id/radioButton4" android:textColor="#5F5B5F"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="439dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="150dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp" android:layout_marginEnd="78dp" android:layout_marginRight="78dp"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        <Button
+                android:text="@string/next"
+                android:layout_width="77dp"
+                android:layout_height="32dp"
+                android:id="@+id/button"
+                android:textColor="#F2F8F5" android:orientation="horizontal" android:clickable="true"
+                android:fadingEdge="horizontal|vertical"
+                android:background="@drawable/rounded_button" android:focusable="true"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="561dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="32dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="208dp"
+                android:layout_marginStart="208dp"/>
+        <EditText
+                android:layout_width="81dp"
+                android:layout_height="34dp"
+                android:inputType="textPersonName"
+                android:text="@string/save_draft"
+                android:ems="10"
+                android:id="@+id/DRAFT"
+                android:clickable="true" android:textSize="12sp" android:autofillHints="" android:focusable="true"
+                tools:targetApi="o" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="562dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="29dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="27dp"
+                android:layout_marginStart="27dp" android:layout_marginEnd="193dp" android:layout_marginRight="193dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:hint="@string/save_draft"/>
+        <TextView
+                android:background="@drawable/textborder"
+                android:layout_width="215dp"
+                android:layout_height="104dp"
+                android:id="@+id/textView11"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="103dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="418dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp" android:layout_marginEnd="68dp" android:layout_marginRight="68dp"
+                app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+            android:layout_width="52dp"
+            android:layout_height="313dp" app:srcCompat="@drawable/highlightnumber2"
+            android:id="@+id/imageView11"
+            android:contentDescription="@string/todo" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="338dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="80dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="28dp" android:layout_marginStart="28dp" android:layout_marginEnd="331dp"
+            android:layout_marginRight="331dp" app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
