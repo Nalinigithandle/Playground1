@@ -86,7 +86,8 @@
     }
 
     #box-flex-left{
-        margin-left: 57px;
+        margin-left:5%;
+        
     }
 
     #box-flex-right{
@@ -94,7 +95,7 @@
         flex-direction:row;
         align-items:center;
         justify-content:space-between;
-        margin-right:57px;
+        margin-right:5%;
     }
 
     #boxes-5{
