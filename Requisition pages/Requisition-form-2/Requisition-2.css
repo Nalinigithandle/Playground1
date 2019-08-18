@@ -41,6 +41,10 @@
     
 }
 
+#propic{
+    border-radius:20px;
+}
+
 #container2{
     display:flex;
     flex-direction: column;
@@ -63,41 +67,42 @@
 
     #container3{
     
-        float:left;
+        
         margin-top:25px;
         height:555px;
-        width:80%;
+        width:98%;
         background-color: rgb(225, 228, 235);
         padding:45px;
         
     }
     
     #box1{
-        display:flex;
-        flex-direction:row;
-        align-items:center;
-        justify-content:space-between;
-        padding:5px;
         margin:auto;
         width:80.5%;
-        height:40px;
-        background-color: rgb(179, 189, 194);
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content: space-between;
+        height:50px;
+        background:rgb(183, 185, 190);
+        padding: 2%;
+        border: 0.5px solid rgb(179, 189, 194);
         
-
+    
     }
 
-    #box-flex-left{
-        margin-left:3%;
-        
-    }
 
     #box-flex-right{
         display:flex;
         flex-direction:row;
         align-items:center;
         justify-content:space-between;
-        margin-right:3%;
+        width:15%;
     }
+
+    
+
+    
 
     #boxes-5{
         display:flex;
@@ -112,20 +117,20 @@
         display: flex;
         flex-direction: row;
         align-items:center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         height:80px;
         background:#FFFFFF;
-        padding: 10px;
+        padding: 2%;
         border: 0.5px solid rgb(179, 189, 194);
     }
     #bb{
         display: flex;
         flex-direction: row;
         align-items:center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         height:80px;
         background: #FFFFFF;
-        padding: 10px;
+        padding: 2%;
         border: 0.5px solid rgb(179, 189, 194);
     }
 
@@ -135,10 +140,10 @@
         display: flex;
         flex-direction: row;
         align-items:center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         height:80px;
         background:  #FFFFFF;
-        padding: 10px;
+        padding: 2%;
         border: 0.5px solid rgb(179, 189, 194);
     }
 
@@ -149,10 +154,10 @@
         display: flex;
         flex-direction: row;
         align-items:center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         height:80px;
         background:  #FFFFFF;
-        padding: 10px;
+        padding: 2%;
         border: 0.5px solid rgb(179, 189, 194);
     }
 
@@ -163,10 +168,10 @@
         display: flex;
         flex-direction: row;
         align-items:center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         height:80px;
         background:  #FFFFFF;
-        padding: 10px;
+        padding: 2%;
         border: 0.5px solid rgb(179, 189, 194);
     }
 
@@ -176,8 +181,7 @@
         align-items:center;
         justify-content: space-between;
         height:50px;
-        padding-right: 20px;
-        padding-left: 20px;
+        width:100%;
 
     }
 
@@ -191,5 +195,15 @@
         
         
     }
+
+    #ff-right-fx{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+        width:25%;
+    }
+
+    
 
     
