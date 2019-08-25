@@ -20,7 +20,7 @@
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-    width:10%;
+    width:13%;
 }
 
 #pic1{
@@ -381,6 +381,24 @@
     padding-right:2%;
     
 
+}
+#pica{
+    border-radius: 30px;
+}
+#picb{
+    border-radius: 30px;
+}
+
+#picc{
+    border-radius: 30px;
+}
+
+#picd{
+    border-radius: 30px;
+}
+
+#pice{
+    border-radius: 30px;
 }
 
 

@@ -46,7 +46,8 @@
                 </div>
                 <div id="box-flex-right">
                     <p style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size:11px">ADD ITEMS </p>
-                   <a href="AddItems-page.html"> <img src="images/plus-icon.png" width="30" height="30"></a>
+                    <img src="images/plus-icon.png" width="30" height="30"
+                        onclick="window.open('AddItems-page.html', 'My window', 'height=300, width=300,top=200,left=400')" />
                 </div>
 
             </div>
@@ -76,15 +77,16 @@
                     <div>
                         <p style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size:11px"> Rs. 45,000 </p>
                     </div>
-                    
+
                     <div class="dropdown">
-                        <img onclick="show_hide()" class="lineimage" src="images/linebar-icon.png" width="30" height="30">
+                        <img onclick="show_hide()" class="lineimage" src="images/linebar-icon.png" width="30"
+                            height="30">
                         <div style="display:none;" id="drop-content">
                             <a href="#"> EDIT</a>
                             <a href="#"> DELETE</a>
                         </div>
                     </div>
-                    
+
 
                 </div>
 
@@ -215,14 +217,17 @@
 
                 <div id="ff">
                     <div>
-                       <a href="save-draft-popup.html"> <p Style="font-family:Verdana, Geneva, Tahoma, sans-serif; color:rgb(61, 56, 56)"> <u>SAVE DRAFT
-                            </u> </p></a>
+                        <a href="save-draft-popup.html">
+                            <p Style="font-family:Verdana, Geneva, Tahoma, sans-serif; color:rgb(61, 56, 56)"> <u>SAVE
+                                    DRAFT
+                                </u> </p>
+                        </a>
                     </div>
 
 
                     <div id="ff-right-fx">
                         <a href="BACK"> BACK </a>
-                       <a href="Attachment1.html"> <button> NEXT </button></a>
+                        <a href="Attachment1.html"> <button> NEXT </button></a>
                     </div>
                 </div>
             </div>
@@ -230,7 +235,7 @@
 
         </div>
     </div>
-    
+
     <script>
         function show_hide() {
             var click = document.getElementById("drop-content");
@@ -242,8 +247,8 @@
             }
 
         }
-       
-        
+
+
     </script>
 </body>
 

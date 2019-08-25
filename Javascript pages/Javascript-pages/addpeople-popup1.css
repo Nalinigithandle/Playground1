@@ -66,7 +66,7 @@
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-    width:40%;
+    width:45%;
     
     
 }
@@ -93,7 +93,7 @@
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-    width:40%;
+    width:45%;
     
     
 }
@@ -116,7 +116,7 @@
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-    width:40%;
+    width:45%;
     
     
 }
@@ -139,7 +139,7 @@
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-    width:40%;
+    width:45%;
     
     
 }
@@ -196,6 +196,7 @@ button{
     display:flex;
     flex-direction:row;
     align-items:center;
+    
     
     
 }

@@ -20,7 +20,7 @@
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-    width:10%;
+    width:14%;
 }
 
 #pic1{
@@ -29,7 +29,7 @@
 
 #box1{
     margin:auto;
-    width:95%;
+    width:90%;
     height:200px;
     background:#245070;
     margin-top:2%;
@@ -246,7 +246,7 @@
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-    width:55%;
+    width:65%;
     margin-left:7.5%;
     height:40px;
     padding-left:2%;
@@ -276,7 +276,7 @@
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-    width:55%;
+    width:65%;
     margin-left:7.5%;
     height:40px;
     padding-left:2%;
@@ -306,7 +306,7 @@
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-    width:55%;
+    width:65%;
     margin-left:7.5%;
     height:40px;
     padding-left:2%;
@@ -344,7 +344,7 @@
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-    width:55%;
+    width:65%;
     margin-left:7.5%;
     height:40px;
     padding-left:2%;
@@ -374,13 +374,32 @@
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-    width:55%;
+    width:65%;
     margin-left:7.5%;
     height:40px;
     padding-left:2%;
     padding-right:2%;
     
 
+}
+
+#pica{
+    border-radius: 30px;
+}
+#picb{
+    border-radius: 30px;
+}
+
+#picc{
+    border-radius: 30px;
+}
+
+#picd{
+    border-radius: 30px;
+}
+
+#pice{
+    border-radius: 30px;
 }
 
 

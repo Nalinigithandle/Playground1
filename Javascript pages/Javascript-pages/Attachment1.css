@@ -62,7 +62,7 @@
 #databox{
     margin:auto;
     width:75%;
-    height:72%;
+    height:70%;
     background:#FFFFFF;
     float:right;
     margin-right:5%;
@@ -86,7 +86,7 @@
     margin:auto;
     width:35%;
     height:103px;
-    margin-top:5%;
+    margin-top:10%;
     margin-left:5%;
     border:1px solid #DFEBEF;
     float:left;
@@ -98,7 +98,7 @@
     margin:auto;
     width:35%;
     height:103px;
-    margin-top:5%;
+    margin-top:10%;
     margin-left:39.82%;
     border:1px solid #DFEBEF;
     background:#32BDD2;
@@ -133,7 +133,7 @@ button{
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-    width:15%;
+    width:19%;
 }
 
 #dottedbox{
@@ -150,8 +150,7 @@ button{
     border-radius:5%;
     background:#32BDD2;
     padding-left:5%;
-    padding-top:5%;
-    
+    padding-top:5%
 
 }
 
@@ -161,93 +160,4 @@ button{
     width:75px;
     height:26px;
     border-radius:25px;
-}
-
-#fourthdata{
-    margin:auto;
-    width:38%;
-    height:55px;
-    border:1px solid #DFEBEF;
-    float:left;
-    margin-left:5%;
-    margin-top:2%;
-    
-}
-
-#fifthdata{
-    margin:auto;
-    width:38%;
-    height:55px;
-    border:1px solid #DFEBEF;
-    margin-top:10%;
-    margin-right:57%;
-    
-}
-
-#a{
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:space-between;
-    margin:auto;
-    width:75%;
-    height:25px;
-    border:1px solid #DFEBEF;
-    float:left;
-    padding-left:4%;
-    padding-right:4%;
-    
-}
-
-#b{
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    margin:auto;
-    width:75%;
-    height:27.5px;
-    border:1px solid #DFEBEF;
-    float:left;
-    padding-left:4%;
-    
-}
-
-#c{
-    position:relative;
-    top:20%;
-    left:8%;
-}
-
-#a1{
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:space-between;
-    margin:auto;
-    width:75%;
-    height:26px;
-    border:1px solid #DFEBEF;
-    float:left;
-    padding-left:4%;
-    padding-right:4%;
-    
-}
-
-#b1{
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    margin:auto;
-    width:75%;
-    height:27.5px;
-    border:1px solid #DFEBEF;
-    float:left;
-    padding-left:4%;
-    
-}
-
-#c1{
-    position:relative;
-    top:20%;
-    left:8%;
 }
