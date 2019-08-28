@@ -1,0 +1,89 @@
+{
+	"Request": [
+		[{
+				"Title": "PUR-2019-056"
+			},
+
+			{
+				"Date": "06 Jul 2019"
+			},
+
+
+			{
+				"Status": "AWAITING APPROVAL"
+			}
+
+		],
+
+		[{
+				"Title": "PUR-2019-056"
+			},
+
+
+
+			{
+				"Date": "06 Jul 2019"
+			},
+
+
+			{
+				"Status": "APPROVED"
+			}
+
+		],
+
+		[{
+				"Title": "PUR-2019-056"
+			},
+
+
+
+			{
+				"Date": "06 Jul 2019"
+			},
+
+
+			{
+				"Status": "DRAFT"
+			}
+
+		],
+
+		[{
+				"Title": "PUR-2019-056"
+			},
+
+
+
+			{
+				"Date": "06 Jul 2019"
+			},
+
+
+			{
+				"Status": "CLEAR"
+			}
+
+		],
+
+		[{
+				"Title": "PUR-2019-056"
+			},
+
+
+
+			{
+				"Date": "06 Jul 2019"
+			},
+
+
+			{
+				"Status": "REJECTED"
+			}
+
+		]
+
+
+	]
+
+}
