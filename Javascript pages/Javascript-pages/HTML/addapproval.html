@@ -39,7 +39,7 @@
             <div id="box1-right-fx">
                 <p style="color:#505050; font-size:13px"><b> ADD APPROVER</b> </p>
                 <img src="../images/plus-icon.png" width="30px" height="30px;"
-                    onclick="window.open('addpeople-popup.html', 'My window', 'height=500, width=900,top=100,left=100')" />
+                onclick="document.getElementById('pop').style.display='block'" />
             </div>
         </div>
 
@@ -86,6 +86,86 @@
 
     </div>
     </div>
+
+    <div id="pop">
+        <div id="cont">
+            <p><b> ADD PEOPLE</b> </p>
+            <img onclick="document.getElementById('pop').style.display='none'" src="../images/close-icon.png" width="30"
+                height="30">
+        </div>
+        <div id="cont1">
+            <div id="sbox">
+                <p>&nbsp&nbsp&nbsp&nbspsearch</p>
+                <a href="Addpeople-search.html"><img src="../images/search-icon.png" width="24px" height="24px"></a>
+            </div>
+
+            <div id="b1">
+                <div id="b1-left-flex">
+                    <img id="picture" src="../images/picture1.png" width="24" height="24">
+                    <div>
+                        <p style="font-size:12px"> Luke Ray</p>
+                        <p style="font-size:10px">Lorem ipsum doler sit amet.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="../images/plus-icon.png" width="24" height="24">
+                </div>
+            </div>
+
+            <div id="b2">
+                <div id="b2-left-flex">
+                    <img id="picture" src="../images/picture1.png" width="24" height="24">
+                    <div>
+                        <p style="font-size:12px"> Luke Ray</p>
+                        <p style="font-size:10px">Lorem ipsum doler sit amet.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="../images/plus-icon.png" width="24" height="24">
+                </div>
+            </div>
+
+            <div id="b3">
+                <div id="b3-left-flex">
+                    <img id="picture" src="../images/picture1.png" width="24" height="24">
+                    <div>
+                        <p style="font-size:12px"> Luke Ray</p>
+                        <p style="font-size:10px">Lorem ipsum doler sit amet.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="../images/plus-icon.png" width="24" height="24">
+                </div>
+            </div>
+
+            <div id="b4">
+                <div id="b4-left-flex">
+                    <img id="picture" src="../images/picture1.png" width="24" height="24">
+                    <div>
+                        <p style="font-size:12px"> Luke Ray</p>
+                        <p style="font-size:10px">Lorem ipsum doler sit amet.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="../images/plus-icon.png" width="24" height="24">
+                </div>
+            </div>
+
+        </div>
+        <div id="cont-last">
+            <a style="color:grey;font-size:12px;" href="addapproval.html">CANCEL </a>
+            <div id="cont-last-right-flex">
+                <div id="dottedbox">
+                    <p style="font-size:12px">You have't selected any person</p>
+                </div>
+                <a href="addapproval.html"> <button> DONE</button></a>
+            </div>
+        </div>
+
+
+    </div>
+
+
 
 </body>
 
