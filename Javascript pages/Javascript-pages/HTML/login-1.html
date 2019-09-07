@@ -2,14 +2,23 @@
 <html>
 
 <head>
-    <title> webpage-login-1 </title>
+    <title> login-1 </title>
     <link rel="stylesheet" type="text/css" href="../CSS/webpage-login-1.css">
     <script>
         function init() {
             location.replace("login-2.html");
         }
+
+        function alert1() {
+            alert("Enter your email or username");
+        }
+
+        function alert2() {
+            alert("Enter the password");
+        }
         console.log("clicked");
     </script>
+
 </head>
 
 <body>
@@ -22,15 +31,15 @@
             </div>
 
             <div id="username">
-                <span style="font-family:sans-serif; color:#595959;font-size:12px;"> Email or Username </span>
-                <p><input type="text" palceholder=""
+                <div id="user">   <span style="font-family:sans-serif; color:#595959;font-size:12px;"> Email or Username </span></div>
+                <p><input type="text" onclick="alert1()" palceholder=""
                         style="height: 30px; width:100%;border: 1px solid ridge;border:1px solid #D3D3D3; border-radius:5px;">
                 </p>
             </div>
 
             <div id="password">
-                <span style="font-family:sans-serif; color:#595959; font-size:12px;"> Password </span>
-                <p><input type="text" palceholder=""
+                <div id="psd">  <span style="font-family:sans-serif; color:#595959; font-size:12px;"> Password </span></div>
+                <p><input type="text" onclick="alert2()" palceholder=""
                         style="height: 30px; width: 100%;border:1px solid #D3D3D3; border-radius:5px;"></p>
             </div>
 
@@ -56,3 +65,5 @@
     </div>
 
 </body>
+
+</html>
