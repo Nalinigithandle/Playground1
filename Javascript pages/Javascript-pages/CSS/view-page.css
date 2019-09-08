@@ -449,8 +449,9 @@
 
 #rot{
     transform: rotate(90deg);
-    margin-left:35%;
+    margin-left:40%;
     margin-top:40%;
+    filter: brightness(5px);
 }
 
 #left-box2{
@@ -465,4 +466,14 @@
     align-items:center;
     justify-content:space-around;
 
+}
+
+#imageblur1{
+    filter: blur(1px);
+}
+#imageblur2{
+    filter: blur(1px);
+}
+#imageblur3{
+    filter: blur(1px);
 }

@@ -357,8 +357,9 @@ button{
 
 #rot{
     transform: rotate(90deg);
-    margin-left:35%;
+    margin-left:40%;
     margin-top:40%;
+    
 }
 
 #left-box2{
@@ -372,8 +373,20 @@ button{
     flex-direction:column;
     align-items:center;
     justify-content:space-around;
+}
 
-    
+#imageblur1{
+    filter: blur(1px);
+}
 
-    
+#imageblur2{
+    filter: blur(1px);
+}
+
+#imageblur3{
+    filter: blur(1px);
+}
+
+#msgimageblur{
+    filter: blur(1px);
 }
