@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         listView=findViewById(R.id.listitemdata);
-        ArrayAdapterExample adapter= new ArrayAdapterExample(getApplicationContext(),title,status,date);
+        ArrayAdapterExample adapter= new ArrayAdapterExample(getApplicationContext(),title,date,status);
         listView.setAdapter(adapter);
 
         title.add("PUR-2019-056");
@@ -29,17 +29,15 @@ public class MainActivity extends AppCompatActivity {
         title.add("PUR-2019-056");
         title.add("PUR-2019-056");
 
-        status.add("APPROVED");
-        status.add("APPROVED");
-        status.add("APPROVED");
-        status.add("APPROVED");
-
         date.add("20-09-2019");
         date.add("22-09-2019");
         date.add("25-09-2019");
         date.add("28-09-2019");
 
-
+        status.add("APPROVED");
+        status.add("APPROVED");
+        status.add("APPROVED");
+        status.add("APPROVED");
 
     }
 }
