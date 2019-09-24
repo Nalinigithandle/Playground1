@@ -118,7 +118,7 @@ public class RequestListpages extends AppCompatActivity
 //        status.add("APPROVED");
 
         listView=findViewById(R.id.listbox);
-        ArrayAdapterExample adapter=new ArrayAdapterExample(getApplicationContext(),requestList);
+        ListAdapter adapter=new ArrayAdapterExample(getApplicationContext(),requestList);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -129,8 +129,8 @@ public class RequestListpages extends AppCompatActivity
                 Intent intent=new Intent(getApplicationContext(),RequestView.class);
                 Bundle req_Bundle=new Bundle();
                 req_Bundle.putString("RequestNumber",request.getRequestNumber());
-                req_Bundle.putString("RequestStatus",request.getRequestStatus().toString());
-                req_Bundle.putString("RequestDescription",request.getDescription());
+                req_Bundle.putString("requestStatus",request.getRequestStatus().toString());
+                req_Bundle.putString("Description",request.getDescription());
 
                 intent.putExtra("request",req_Bundle);
                 startActivity(intent);

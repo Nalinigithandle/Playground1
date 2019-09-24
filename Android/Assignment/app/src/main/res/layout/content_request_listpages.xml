@@ -10,7 +10,7 @@
     tools:showIn="@layout/app_bar_request_listpages">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/requestbox"
+        android:id="@+id/conatainerbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,7 +96,7 @@
         android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/requestbox">
+        app:layout_constraintTop_toBottomOf="@+id/conatainerbox">
 
         <ImageView
             android:id="@+id/filterimage"

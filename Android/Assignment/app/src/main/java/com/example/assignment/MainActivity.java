@@ -9,6 +9,7 @@ import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     TextView forgpass;
     EditText emailcont;
     EditText passcont;
+
+    ImageView eyeimage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
         forgpass=findViewById(R.id.forgotpassword);
         emailcont=findViewById(R.id.emailbox);
         passcont=findViewById(R.id.passwordbox);
+
+        eyeimage=findViewById(R.id.eyepic);
+        eyeimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),RequestlUsingFragment.class);
+                startActivity(intent);
+            }
+        });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

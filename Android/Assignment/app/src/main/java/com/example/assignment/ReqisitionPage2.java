@@ -20,36 +20,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
-import android.widget.TextView;
 
-public class RequestView extends AppCompatActivity
+public class ReqisitionPage2 extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    TextView Request_information;
-    TextView Request_status;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_request_view);
-
-        Request_information=findViewById(R.id.reqinfo);
-        Request_status=findViewById(R.id.reqcondition);
-
-        Bundle requestBundle=getIntent().getBundleExtra("request");
-        String Requestdata=requestBundle.getString("RequestNumber");
-        Request_information.setText(Requestdata);
-
-
-
-//        String requestlistdata=requestBundle.getString("RequestNumber");
-////        String Requestdata=requestBundle.getString("RequestNumber");
-//        Request_information.setText(requestlistdata);
-//        String Requeststat=requestBundle.getString("requestStatus");
-//        Request_status.setText(Requeststat);
-
-
-
+        setContentView(R.layout.activity_reqisition_page2);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -82,7 +60,7 @@ public class RequestView extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.request_view, menu);
+        getMenuInflater().inflate(R.menu.reqisition_page2, menu);
         return true;
     }
 
