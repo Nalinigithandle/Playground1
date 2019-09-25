@@ -2,8 +2,6 @@ package com.example.assignment;
 
 import android.os.Bundle;
 
-import com.example.assignment.Delegates.RequestDelegate;
-import com.example.assignment.Model.RequestModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -20,20 +18,18 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
 
-public class RequestlUsingFragment extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, RequestDelegate {
+public class ReqviewUsingFragment extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_requestl_using_fragment);
-
+        setContentView(R.layout.activity_reqview_using_fragment);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -52,24 +48,9 @@ public class RequestlUsingFragment extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
-        FragmentReqPage My_Fragment=new FragmentReqPage();
-        My_Fragment.setRequestDelegate(this);
-        FragmentManager fragmentManager=getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment,My_Fragment);
-        fragmentTransaction.commit();
+
     }
 
-//    public void RequestlUsingFragment(View view){
-//        FragmentReqPage My_Fragment=new FragmentReqPage();
-//        My_Fragment.setRequestDelegate(this);
-//        FragmentManager fragmentManager=getSupportFragmentManager();
-//        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-//        fragmentTransaction.replace(R.id.fragment,My_Fragment);
-//        fragmentTransaction.commit();
-//
-//
-//    }
 
     @Override
     public void onBackPressed() {
@@ -84,7 +65,7 @@ public class RequestlUsingFragment extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.requestl_using, menu);
+        getMenuInflater().inflate(R.menu.reqview_using, menu);
         return true;
     }
 
@@ -126,16 +107,5 @@ public class RequestlUsingFragment extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    @Override
-    public void onClickRequestItem(RequestModel requestModel) {
-        int i=0;
-        Fragment My_Fragment=new FragmentReqPage2();
-        FragmentManager fragmentManager=getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment,My_Fragment);
-        fragmentTransaction.commit();
-
     }
 }

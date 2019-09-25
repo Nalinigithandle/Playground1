@@ -52,7 +52,7 @@ public class RequestListpages extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request_listpages);
-
+        listView=findViewById(R.id.listbox);
         newreqbtn=findViewById(R.id.newreqbutton);
         newreqbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,7 +117,7 @@ public class RequestListpages extends AppCompatActivity
 //        status.add("APPROVED");
 //        status.add("APPROVED");
 
-        listView=findViewById(R.id.listbox);
+
         ListAdapter adapter=new ArrayAdapterExample(getApplicationContext(),requestList);
         listView.setAdapter(adapter);
 
