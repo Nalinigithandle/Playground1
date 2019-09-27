@@ -20,8 +20,4 @@ public class FragmentReqPage2 extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_fragment_req_page2, container, false);
     }
-
-
-
-
 }

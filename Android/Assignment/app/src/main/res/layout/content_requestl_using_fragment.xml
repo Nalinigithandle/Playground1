@@ -10,13 +10,22 @@
     tools:context=".RequestlUsingFragment"
     tools:showIn="@layout/app_bar_requestl_using_fragment">
 
-    <fragment
-        android:id="@+id/fragment"
-        android:name="com.example.assignment.FragmentReqPage"
+    <!--<fragment-->
+        <!--android:id="@+id/fragment"-->
+        <!--android:name="com.example.assignment.FragmentReqPage"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <FrameLayout
+        android:id="@+id/port_frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

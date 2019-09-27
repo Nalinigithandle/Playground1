@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:orientation="vertical"
-    android:paddingVertical="5dp"
+    android:padding="5dp"
     android:textColor="#352F2F"
     android:textSize="10dp">
 
