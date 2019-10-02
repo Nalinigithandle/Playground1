@@ -174,7 +174,7 @@ tools:context=".FragmentReqPage2"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/r_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
@@ -199,7 +199,7 @@ tools:context=".FragmentReqPage2"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/r_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="44dp"
@@ -208,7 +208,7 @@ tools:context=".FragmentReqPage2"
                     android:text="06, July 2019"
                     android:textColor="#090808"
                     android:textSize="8dp"
-                    app:layout_constraintStart_toEndOf="@+id/textView9"
+                    app:layout_constraintStart_toEndOf="@+id/r_number"
                     app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
                 <TextView
@@ -224,16 +224,16 @@ tools:context=".FragmentReqPage2"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/r_status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="42dp"
-                    android:layout_marginLeft="42dp"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginLeft="41dp"
                     android:layout_marginTop="5dp"
                     android:text="AWAITING APPROVAL"
                     android:textColor="#0A0A0A"
                     android:textSize="8dp"
-                    app:layout_constraintStart_toEndOf="@+id/textView11"
+                    app:layout_constraintStart_toEndOf="@+id/r_date"
                     app:layout_constraintTop_toBottomOf="@+id/textView12" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -72,6 +72,32 @@ public class RequestlUsingFragment extends AppCompatActivity
 //
 //    }
 
+
+    @Override
+    public  void onConfigurationChanged(Configuration newConfigur) {
+        super.onConfigurationChanged(newConfigur);
+
+        if (newConfigur.orientation==Configuration.ORIENTATION_LANDSCAPE) {
+
+            Fragment My_Fragment = new FragmentReqPage2();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.land_reqview, My_Fragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+
+        } else  if(newConfigur.orientation==Configuration.ORIENTATION_PORTRAIT) {
+
+            Fragment My_Fragment=new FragmentReqPage2();
+            FragmentManager fragmentManager=getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.port_frame_layout,My_Fragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+
+        }
+    }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -134,19 +160,24 @@ public class RequestlUsingFragment extends AppCompatActivity
         int i=0;
         int orientation=this.getResources().getConfiguration().orientation;
         if(orientation== Configuration.ORIENTATION_PORTRAIT){
+
             Fragment My_Fragment=new FragmentReqPage2();
             FragmentManager fragmentManager=getSupportFragmentManager();
             FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.port_frame_layout,My_Fragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
-        }else {
+            ((FragmentReqPage2)My_Fragment).set_data(requestModel);
+
+        }else if(orientation==Configuration.ORIENTATION_LANDSCAPE) {
+
             Fragment My_Fragment = new FragmentReqPage2();
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.land_reqview, My_Fragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
+            ((FragmentReqPage2)My_Fragment).set_data(requestModel);
         }
     }
 }
