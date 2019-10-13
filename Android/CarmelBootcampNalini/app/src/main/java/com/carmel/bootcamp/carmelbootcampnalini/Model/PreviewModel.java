@@ -7,6 +7,15 @@ public class PreviewModel implements Serializable {
     String Documentsize;
     String Profilename;
     String Approvalprofilenames;
+    String Approvalprofiledescriptions;
+
+    public String getApprovalprofiledescriptions() {
+        return Approvalprofiledescriptions;
+    }
+
+    public void setApprovalprofiledescriptions(String approvalprofiledescriptions) {
+        Approvalprofiledescriptions = approvalprofiledescriptions;
+    }
 
     public String getApprovalprofilenames() {
         return Approvalprofilenames;

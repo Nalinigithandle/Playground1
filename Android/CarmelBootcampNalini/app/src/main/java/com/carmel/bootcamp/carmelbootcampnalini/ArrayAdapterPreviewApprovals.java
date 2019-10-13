@@ -50,6 +50,7 @@ class ArrayAdapterPreviewApprovals extends BaseAdapter {
         PreviewModel previewModel3=this.previewapproval.get(i);
 
         profile_name.setText(String.valueOf(previewModel3.getApprovalprofilenames()));
+        profile_description.setText(String.valueOf(previewModel3.getApprovalprofiledescriptions()));
         profile_picture.setImageResource(R.drawable.picture1);
 
         return view;
