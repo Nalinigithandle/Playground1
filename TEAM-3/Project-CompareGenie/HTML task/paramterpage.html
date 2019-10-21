@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> parameterpage </title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script>
+            function addRow(){
+                var parametername= document.getElementById('parametername').value;
+                var subparametername= document.getElementById('subparametername').value;
+                var actionstakenname= document.getElementById('actionstakenrname').value;
+                
+                var table= document.getElementsByTagName('table') [0];
+                
+                var newRow= table.insertRow(1);
+                
+                var cel1= newRow.insertCell(0);
+                var cel2=newRow.insertCell(1);
+                var cel3= newRow.insertCell(2);
+                
+                cel1.innerHTML=parametername;
+                cel2.innerHTML=subparametername;
+                cel3.innerHTML=actionstakenrname;
+            }
+
+        
+        </script>
+    </head>
+    <body>
+
+        Parameter Name:<input id="parametername" type="text" name="parametername"/><br><br>
+        SubParameter Name:<input id="subparametername" type="text" name="subparametername"/><br><br>
+        Actionstaken Name:<input id="actionstakenname" type="text" name="actionstakenname"/><br><br>
+        
+        <button onclick="addRow();">ADD</button><br><br>
+
+        <table>
+            <tr>
+                <th> Parameters Added</th>
+                <th> Sub Parameters Added</th>
+                <th> Actions </th>
+            </tr>
+            <tr>
+                <td>color</td>
+                <td>pixel</td>
+                <td>Remove</td>
+            </tr>
+            <tr>
+                <td>color</td>
+                <td>pixel</td>
+                <td>Remove</td>
+            </tr>
+        </table>
+    </body>
+</html>
