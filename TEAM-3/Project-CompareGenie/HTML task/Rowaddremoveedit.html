@@ -3,10 +3,10 @@
 
 <head>
     <title>EditRow</title>
-    
+
     <style>
         .container {
-            overflow: hidden
+            overflow: hidden;
         }
 
         .tab {
@@ -45,26 +45,26 @@
                     <th>Sub parameter2</th>
                 </tr>
                 <tr>
-                    <td>A1</td>
-                    <td>B1</td>
-                    <td>10</td>
+                    <td>Size</td>
+                    <td>height</td>
+                    <td>width</td>
                 </tr>
                 <tr>
-                    <td>A3</td>
-                    <td>B3</td>
-                    <td>30</td>
+                    <td>color</td>
+                    <td>pixel</td>
+                    <td>dpi</td>
                 </tr>
                 <tr>
                     <td>A2</td>
                     <td>B2</td>
-                    <td>20</td>
+                    <td>C2</td>
                 </tr>
             </table>
         </div>
         <div class="tab tab-2">
             Parameter :<input type="text" name="fname" id="fname">
             Sub parameter1 :<input type="text" name="lname" id="lname">
-            Sub parameter2 :<input type="text" name="age" id="age">
+            Sub parameter2 :<input type="text" name="llname" id="llname">
 
             <button onclick="addHtmlTableRow();">Add</button>
             <button onclick="editHtmlTbleSelectedRow();">Edit</button>
@@ -77,31 +77,30 @@
         var rIndex,
             table = document.getElementById("table");
 
-        // check the empty input
         function checkEmptyInput() {
             var isEmpty = false,
                 fname = document.getElementById("fname").value,
                 lname = document.getElementById("lname").value,
-                age = document.getElementById("age").value;
+                llname = document.getElementById("llname").value;
 
             if (fname === "") {
-                alert("First Name Connot Be Empty");
+                alert("Parameter Name Connot Be Empty");
                 isEmpty = true;
             }
             else if (lname === "") {
-                alert("Last Name Connot Be Empty");
+                alert("Sub parameter1 Name Connot Be Empty");
                 isEmpty = true;
             }
-            else if (age === "") {
-                alert("Age Connot Be Empty");
+            else if (llname === "") {
+                alert("Sub parameter2 Name Connot Be Empty");
                 isEmpty = true;
             }
             return isEmpty;
         }
 
-        
+
         function addHtmlTableRow() {
-           
+
             if (!checkEmptyInput()) {
                 var newRow = table.insertRow(table.length),
                     cell1 = newRow.insertCell(0),
@@ -109,11 +108,11 @@
                     cell3 = newRow.insertCell(2),
                     fname = document.getElementById("fname").value,
                     lname = document.getElementById("lname").value,
-                    age = document.getElementById("age").value;
+                    llname = document.getElementById("llname").value;
 
                 cell1.innerHTML = fname;
                 cell2.innerHTML = lname;
-                cell3.innerHTML = age;
+                cell3.innerHTML = llname;
                 selectedRowToInput();
             }
         }
@@ -125,7 +124,7 @@
                     rIndex = this.rowIndex;
                     document.getElementById("fname").value = this.cells[0].innerHTML;
                     document.getElementById("lname").value = this.cells[1].innerHTML;
-                    document.getElementById("age").value = this.cells[2].innerHTML;
+                    document.getElementById("llname").value = this.cells[2].innerHTML;
                 };
             }
         }
@@ -134,11 +133,11 @@
         function editHtmlTbleSelectedRow() {
             var fname = document.getElementById("fname").value,
                 lname = document.getElementById("lname").value,
-                age = document.getElementById("age").value;
+                llname = document.getElementById("llname").value;
             if (!checkEmptyInput()) {
                 table.rows[rIndex].cells[0].innerHTML = fname;
                 table.rows[rIndex].cells[1].innerHTML = lname;
-                table.rows[rIndex].cells[2].innerHTML = age;
+                table.rows[rIndex].cells[2].innerHTML = llname;
             }
         }
 
@@ -146,7 +145,7 @@
             table.deleteRow(rIndex);
             document.getElementById("fname").value = "";
             document.getElementById("lname").value = "";
-            document.getElementById("age").value = "";
+            document.getElementById("llname").value = "";
         }
     </script>
 

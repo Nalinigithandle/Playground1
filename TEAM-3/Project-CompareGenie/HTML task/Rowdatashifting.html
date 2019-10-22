@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTMLTableRowUpAndDown</title>
+        
+<style>
+      tr{cursor: pointer}.selected{background-color: blue; color: #fff;font-weight: bold}
+      button{margin-top:2px;background-color: #eee;border: 1px solid #00F;
+      color: #17bb1c;font-weight: bold;font-size: 25px;cursor: pointer}
+</style>
+
+</head>
+  <body>
+      <table id="table" border="1">
+       <tr>
+           <th>Parameter</th>
+           <th>Sub Parameter1</th>
+           <th>Suub Prameter2</th>
+       </tr>
+            <tr>
+                <td>A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr>
+            <tr>
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+            </tr>
+            <tr>
+                <td>A3</td>
+                <td>B3</td>
+                <td>C3</td>
+            </tr>
+        </table>
+        
+<button onclick="upNdown('up');">&ShortUpArrow;</button>
+<button onclick="upNdown('down');">&ShortDownArrow;</button>
+        
+        <script>
+            
+            var index;
+            function getSelectedRow()
+            {
+                var table = document.getElementById("table");
+                for(var i = 1; i < table.rows.length; i++)
+                {
+                    table.rows[i].onclick = function()
+                    {
+                        
+                        if(typeof index !== "undefined"){
+                            table.rows[index].classList.toggle("selected");
+                        }
+                       
+                        index = this.rowIndex;
+                        this.classList.toggle("selected");
+
+                    };
+                }
+                    
+            }
+  
+
+            getSelectedRow();
+            
+            
+            function upNdown(direction)
+            {
+                var rows = document.getElementById("table").rows,
+                    parent = rows[index].parentNode;
+                 if(direction === "up")
+                 {
+                     if(index > 1){
+                        parent.insertBefore(rows[index],rows[index - 1]);
+                        index--;
+                    }
+                 }
+                 
+                 if(direction === "down")
+                 {
+                     if(index < rows.length -1){
+                        parent.insertBefore(rows[index + 1],rows[index]);
+                        index++;
+                    }
+                 }
+            }
+            
+        </script>
+    </body>
+</html>
