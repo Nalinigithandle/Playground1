@@ -25,8 +25,51 @@
                 cel2.innerHTML=subparametername;
                 cel3.innerHTML=actionstakenname;
             }
+            
+            
+            function getSelectedRow(){
+            var index;
+            var table = document.getElementById("table");
+            for(var i=1; i < table.rows.length; i++)
+            {
+                table.rows[i].onclick= function()
+                {
+                    if(typeof index !== "undefined"){
+                        table.rows[index].classList.toggle("selected");
+                    }
+                    
+                    index = this.rowIndex;
+                        this.classList.toggle("selected");
 
-        
+                };
+                
+            }
+                
+            }
+
+            getSelectedRow();
+            
+            
+            function updown(direction)
+            {
+                var rows = document.getElementById("table").rows,
+                    parent = rows[index].parentNode;
+                 if(direction === "up")
+                 {
+                     if(index > 1){
+                        parent.insertBefore(rows[index],rows[index - 1]);
+                    index--;
+                    }
+                 }
+                 
+                 if(direction === "down")
+                 {
+                     if(index < rows.length -1){
+                        parent.insertBefore(rows[index + 1],rows[index]);
+                    index++;
+                    }
+                 }
+            }
         </script>
     </head>
     <body>
@@ -55,6 +98,9 @@
             </tr>
         </table>
 
-        <button id="uparrow" onclick="updown">&ShortUpArrow;</button>
+        <button id="uparrow;" onclick="upNdown('up');">&ShortUpArrow;</button>
+        <button id="downarrow;" onclick="upNdown('down');">&ShortDownArrow;</button>
+
+
     </body>
 </html>
