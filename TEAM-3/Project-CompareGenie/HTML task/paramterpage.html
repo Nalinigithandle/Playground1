@@ -2,18 +2,20 @@
 <html>
     <head>
         <title> parameterpage </title>
-        <meta charset="windows-1252">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <link rel="stylesheet" type="text/css" href="parameterpage.css">
+        <style>
+            tr{cursor: pointer}.selected{background-color: blue;}
+        </style>
+        
         <script>
             function addRow(){
-                var parametername= document.getElementById('parametername').value;
-                var subparametername= document.getElementById('subparametername').value;
-                var actionstakenname= document.getElementById('actionstakenrname').value;
+                var parametername= document.getElementById('pname').value;
+                var subparametername= document.getElementById('spname').value;
+                var actionstakenname= document.getElementById('aname').value;
                 
                 var table= document.getElementsByTagName('table') [0];
                 
-                var newRow= table.insertRow(1);
+                var newRow= table.insertRow(table.rows.length);
                 
                 var cel1= newRow.insertCell(0);
                 var cel2=newRow.insertCell(1);
@@ -21,7 +23,7 @@
                 
                 cel1.innerHTML=parametername;
                 cel2.innerHTML=subparametername;
-                cel3.innerHTML=actionstakenrname;
+                cel3.innerHTML=actionstakenname;
             }
 
         
@@ -29,28 +31,30 @@
     </head>
     <body>
 
-        Parameter Name:<input id="parametername" type="text" name="parametername"/><br><br>
-        SubParameter Name:<input id="subparametername" type="text" name="subparametername"/><br><br>
-        Actionstaken Name:<input id="actionstakenname" type="text" name="actionstakenname"/><br><br>
+        Parameter:<input id="pname" type="text" name="parametername"/><br><br>
+        SubParameter1:<input id="spname" type="text" name="subparametername"/><br><br>
+        SubParameter2:<input id="aname" type="text" name="actionstakenname"/><br><br>
         
-        <button onclick="addRow();">ADD</button><br><br>
+        <button style="background:rgb(129, 129, 201)" onclick="addRow();">ADD</button><br><br>
 
-        <table>
+        <table border="1">
             <tr>
-                <th> Parameters Added</th>
-                <th> Sub Parameters Added</th>
-                <th> Actions </th>
+                <th> Parameters</th>
+                <th> Sub Parameter1</th>
+                <th> Sub Parameter2 </th>
             </tr>
             <tr>
                 <td>color</td>
                 <td>pixel</td>
-                <td>Remove</td>
+                <td>dpi</td>
             </tr>
             <tr>
-                <td>color</td>
-                <td>pixel</td>
-                <td>Remove</td>
+                <td>Size</td>
+                <td>height</td>
+                <td>width</td>
             </tr>
         </table>
+
+        <button id="uparrow" onclick="updown">&ShortUpArrow;</button>
     </body>
 </html>
