@@ -1,0 +1,68 @@
+*{margin:0; padding:0; box-sizing:border-box;}
+
+#header{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    margin:auto;
+    height:60px;
+    width:100%;
+    background:rgb(1, 65, 20);
+    box-shadow: 0px 0px 4px;
+
+
+}
+
+#left-box{
+    margin-left:2%;
+}
+
+#right-box{
+    width:13%;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-end;
+    margin-right:2%;
+    
+}
+#title{
+    margin:auto;
+    width:100%;
+    padding:2%;
+    background: rgb(189, 169, 169);
+}
+#comparisonsheet{
+    margin:auto;
+    width:100%;
+    margin-top:2%;
+    padding:1%;
+    background:gray;
+}
+#createfromblank{
+    margin:auto;
+    width:100%;
+    margin-top:2%;
+    padding:1%;
+
+}
+#textboxcontainer{
+    margin:auto;
+    width:100%;
+    margin-top:1%;
+    padding:1%;
+
+
+}
+#buttonscontainer{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:1%;
+    margin-left:1%;
+    margin-right:2%;
+
+
+}

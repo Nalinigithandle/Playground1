@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> project page 3 </title>
+    <link rel="stylesheet" type="text/css" href="page3.css">
+    <script type="text/javascript" src="table.js"></script>
+
+</head>
+
+<body>
+    <div id="header">
+        <div id="left-box">
+            <img id="lineicon" src="./images/lineicon.png" width="24px" height="24px" alt="burgerimage">
+        </div>
+        <div id="right-box">
+            <img id="pic" src="./images/close-icon.png" width="24px" height="24px" alt="closeimage">
+        </div>
+    </div>
+    <div style="text-align: center" id="title">
+        <p style="color: rgb(3, 58, 19); font-size: 25px; font-family: Verdana, Geneva, Tahoma, sans-serif;"> <b>Compare
+                Genie</b></p>
+    </div>
+    <div id="comparisonsheet">
+        <p
+            style="color: rgb(87, 4, 4); font-size: 18px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            <b>Comparison Sheet</b></p>
+    </div>
+    </div>
+
+    <div id="wrapper">
+        <table align='center' cellspacing=2 cellpadding=5 id="data_table" border=1>
+            <tr>
+                <th>Object &nbsp&nbsp <img onclick="document.getElementById('popup').style.display='block'"
+                        id="addimage1" src="./images/plus-icon.png" width="20" height="20"></th>
+                <th>Parameter &nbsp&nbsp <img onclick="document.getElementById('parameterpopup').style.display='block'"
+                        id="addimage2" src="./images/plus-icon.png" width="20" height="20"></th>
+                <th>Subparameter</th>
+            </tr>
+
+            <tr id="row1">
+                <td id="name_row1">Object</td>
+                <td id="country_row1">Parameter</td>
+                <td id="age_row1">Subparameter</td>
+                <td>
+                    <input type="button" style="background: black; color: white; padding:5px" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+                    <input type="button" style="background: black; color: white; padding:5px" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+                    <input type="button" style="background: black; color: white; padding:5px" value="Delete" class="delete" onclick="delete_row('1')">
+                </td>
+            </tr>
+
+            <tr id="row2">
+                <td id="name_row2">Object</td>
+                <td id="country_row2">Parameter</td>
+                <td id="age_row2">Subparameter</td>
+                <td>
+                    <input type="button" style="background: black; color: white; padding:5px"id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+                    <input type="button" style="background: black; color: white; padding:5px"id="save_button2" value="Save" class="save" onclick="save_row('2')">
+                    <input type="button" style="background: black; color: white; padding:5px"value="Delete" class="delete" onclick="delete_row('2')">
+                </td>
+            </tr>
+
+            <tr id="row3">
+                <td id="name_row3">Object</td>
+                <td id="country_row3">Parameter</td>
+                <td id="age_row3">Subparameter</td>
+                <td>
+                    <input type="button" style="background: black; color: white; padding:5px"id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+                    <input type="button" style="background: black; color: white; padding:5px"id="save_button3" value="Save" class="save" onclick="save_row('3')">
+                    <input type="button" style="background: black; color: white; padding:5px"value="Delete" class="delete" onclick="delete_row('3')">
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="text" id="new_name"></td>
+                <td><input type="text" id="new_country"></td>
+                <td><input type="text" id="new_age"></td>
+                <td><input type="button" style="background: rgb(10, 47, 170); color: white; padding:5px"class="add" onclick="add_row();" value="Add Row"></td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div id="popup">
+        <div id="c2">
+            <div id="c3">
+
+                <span><B>Add Object</B></span></U></span>
+                <div id="image"> <img onclick="document.getElementById('popup').style.display='none'"
+                        src="./images/close-icon.png" width="20" height="20">
+                </div>
+
+                <div id="c4">
+                    <br><input type="text" placeholder="" style="width:150; height:35;">
+                    <br><br><button style="background: blue; color:white; padding:5px">ADD</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="parameterpopup">
+        <div id="c5">
+            <div id="c6">
+
+                <span><B>Add Parameter</B></span></U></span>
+                <div id="closeimageparameter"> <img
+                        onclick="document.getElementById('parameterpopup').style.display='none'"
+                        src="./images/close-icon.png" width="20" height="20">
+                </div>
+
+                <div id="c7">
+                    <br><input type="text" placeholder="" style="width:150; height:35;">
+                    <br><br><button style="background: blue; color:white; padding:5px">ADD</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
