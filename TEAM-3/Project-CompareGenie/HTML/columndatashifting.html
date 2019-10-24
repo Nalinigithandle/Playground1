@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTMLTableColumnLeftAndRight</title>
+
+    <style>
+        tr {
+            cursor: pointer
+        }
+
+        .selected {
+            background-color: blue;
+            color: #fff;
+            font-weight: bold
+        }
+
+        button {
+            margin-top: 2px;
+            background-color: #eee;
+            border: 1px solid #00F;
+            color: #17bb1c;
+            font-weight: bold;
+            font-size: 25px;
+            cursor: pointer
+        }
+    </style>
+
+</head>
+
+<body>
+    <table id="table" border="1">
+        <tr>
+            <th>Parameter</th>
+            <th>Sub Parameter1</th>
+            <th>Sub Parameter2</th>
+        </tr>
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+    </table>
+
+    <button onclick="leftNright('left');">&ShortLeftArrow;</button>
+    <button onclick="leftNright('right');">&ShortRightArrow;</button>
+
+    <script>
+
+        var index;
+        function getSelectedColumn() {
+            var table = document.getElementById("table");
+            for (var i = 1; i <table.columns.length; i++) {
+                table.columns[i].onclick = function() {
+                    if(typeof index!== "undefined") {
+                        table.columns[index].classList.toggle("selected");
+
+                    }
+                    index = this.columnIndex;
+                    this.classList.toggle("selected");
+                };
+            }
+        }
+
+        getSelectedColumn();
+
+        function leftNright(direction) {
+            var columns = document.getElementById("table").columns,
+            parent = columns[index].parentNode;
+            if (direction === "left") {
+                if (index > 1) {
+                    parent.insertBefore(columns[index], columns[index - 1]);
+                    index--;
+                }
+            }
+
+            if (direction === "right") {
+                if (index < columns.length - 1) {
+                    parent.insertBefore(columns[index + 1], columns[index]);
+                    index++;
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
