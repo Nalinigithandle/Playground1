@@ -22,9 +22,9 @@ function save_row(no)
  var parameter_val=document.getElementById("parameter_text"+no).value;
  var subparameter_val=document.getElementById("subparameter_text"+no).value;
 
- document.getElementById("object_row"+no).innerHTML=name_val;
- document.getElementById("parameter_row"+no).innerHTML=country_val;
- document.getElementById("subparameter_row"+no).innerHTML=age_val;
+ document.getElementById("object_row"+no).innerHTML=object_val;
+ document.getElementById("parameter_row"+no).innerHTML=parameter_val;
+ document.getElementById("subparameter_row"+no).innerHTML=subparameter_val;
 
  document.getElementById("edit_button"+no).style.display="block";
  document.getElementById("save_button"+no).style.display="none";

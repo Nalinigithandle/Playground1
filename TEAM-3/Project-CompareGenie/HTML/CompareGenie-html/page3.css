@@ -144,4 +144,18 @@
     margin-top:3%;
 }
 
+tr{
+    cursor: pointer
+}
 
+.selected{
+    background-color: rgb(218, 128, 26); 
+    color: #fff;
+}
+
+#back{
+    background:blue;
+    margin-top:10%;
+    color:white;
+    padding:0.5%;
+}

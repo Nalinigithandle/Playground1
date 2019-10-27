@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>dynamic table</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="dynamictable.css" />
+</head>
+
+<body>
+    <div id="mainheader">
+        <div id="left-box">
+            <img id="lineicon" src="./images/lineicon.png" width="24px" height="24px" alt="burgerimage">
+        </div>
+        <div id="right-box">
+            <img id="pic" src="./images/close-icon.png" width="24px" height="24px" alt="closeimage">
+        </div>
+    </div>
+    <div style="text-align: center" id="title">
+        <p style="color: rgb(3, 58, 19); font-size: 25px; font-family: Verdana, Geneva, Tahoma, sans-serif;"> <b>Compare
+                Genie</b></p>
+    </div>
+    <div id="comparisonsheet">
+        <p
+            style="color: rgb(87, 4, 4); font-size: 18px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            <b>Comparison Sheet</b></p>
+    </div>
+    </div>
+    <div style="min-height: 8vh"></div>
+    <div class="main-container">
+
+       <form>
+            <table id="display" border="1" class="table">
+                <thead>
+                    <tr>
+                        <th>Parameters<img src="./images/plus-icon.png" height="30" width="30" alt="cancel-image"
+                                id="addParameter"></th>
+                        <th>Objects<img src="./images/plus-icon.png" height="30" width="30" alt="cancel-image"
+                                id="addProduct"></th>
+
+
+                    </tr>
+                </thead>
+                <tbody class="row_drag">
+
+                    <tr id="1">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </form>
+        <div class="add_Parameter_popup">
+
+            <div class="top">
+                <div>
+                    <p><b>Add Parameter</b></p>
+                </div>
+            </div>
+
+            <div class="middle">
+                <p style="padding: 5px">Enter a Parameter</p>
+                <input type="text" id="parameter" style="padding: 10px">
+                <div style="min-height: 5vh"></div>
+            </div>
+
+            <div class="bottom">
+
+                <div><button type="button" id="add">ADD</button></div>
+            </div>
+
+        </div>
+        <div class="add_Product_popup">
+
+            <div class="top">
+                <div>
+                    <p><b>Add Product</b></p>
+                </div>
+            </div>
+
+            <div class="middle">
+                <p style="padding: 5px">Enter a Product</p>
+                <input type="text" id="product" style="padding: 10px">
+                <div style="min-height: 5vh"></div>
+            </div>
+
+            <div class="bottom">
+
+                <div><button type="button" id="productAdd" style="padding-left: 10px"
+                        onclick="addColumn('display')">ADD</button></div>
+            </div>
+
+        </div>
+        <div style="min-height: 6vh"></div>
+    </div>
+
+
+</body>
+<script>
+    function addColumn(tblId) {
+        var tblHeadObj = document.getElementById(tblId).tHead;
+        for (var h = 0; h < tblHeadObj.rows.length; h++) {
+            var newTH = document.createElement('th');
+            tblHeadObj.rows[h].appendChild(newTH);
+            newTH.innerHTML = 'Object'
+        }
+
+    }
+    var entry = document.getElementById("add");
+    entry.addEventListener("click", displayDetails);
+
+    function displayDetails() {
+        var addParameter1 = document.getElementById("parameter").value;
+
+        var display = document.getElementById("display");
+        var newRow = display.insertRow(display.rows.length).outerHTML = ("<tr data-name='" + addParameter1 + "'><td>" + addParameter1 + "</td><td>" + addParameter1 + "</td><td><button class='btn btn-info btn-xs btn-edit'>Edit</button><button class='btn btn-danger btn-xs btn-delete' onclick='delete_row(" + newRow + ")' id='delete'>Delete</button></td></tr>");
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+
+        cell1.innerHTML = addParameter1;
+        cell2.insertHTML = addParameter1;
+        cell3.insertHTML = addParameter1;
+
+    }
+    function delete_row() {
+        document.getElementById("" + newRow + "").outerHTML = "";
+
+    }
+
+    document.getElementById("addParameter").addEventListener("click", function () {
+        document.querySelector(".add_Parameter_popup").style.display = "block";
+    })
+    document.getElementById("add").addEventListener("click", function () {
+        document.querySelector(".add_Parameter_popup").style.display = "none";
+    })
+    document.getElementById("addProduct").addEventListener("click", function () {
+        document.querySelector(".add_Product_popup").style.display = "block";
+    })
+    document.getElementById("productAdd").addEventListener("click", function () {
+        document.querySelector(".add_Product_popup").style.display = "none";
+    })
+    document.getElementById("cancel-icon").addEventListener("click", function () {
+        document.querySelector(".add_Parameter_popup").style.display = "none";
+    })
+    document.getElementById("parameter-cancel-text").addEventListener("click", function () {
+        document.querySelector(".add_Parameter_popup").style.display = "none";
+    })
+    document.getElementById("cancel-icon-product").addEventListener("click", function () {
+        document.querySelector(".add_Product_popup").style.display = "none";
+    })
+    document.getElementById("product-cancel-text").addEventListener("click", function () {
+        document.querySelector(".add_Product_popup").style.display = "none";
+    })
+</script>
+
+</html>

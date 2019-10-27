@@ -1,106 +1,102 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> parameterpage </title>
-        <link rel="stylesheet" type="text/css" href="parameterpage.css">
-        <style>
-            tr{cursor: pointer}.selected{background-color: blue;}
-        </style>
-        
-        <script>
-            function addRow(){
-                var parametername= document.getElementById('pname').value;
-                var subparametername= document.getElementById('spname').value;
-                var actionstakenname= document.getElementById('aname').value;
-                
-                var table= document.getElementsByTagName('table') [0];
-                
-                var newRow= table.insertRow(table.rows.length);
-                
-                var cel1= newRow.insertCell(0);
-                var cel2=newRow.insertCell(1);
-                var cel3= newRow.insertCell(2);
-                
-                cel1.innerHTML=parametername;
-                cel2.innerHTML=subparametername;
-                cel3.innerHTML=actionstakenname;
-            }
-            
-            
-            function getSelectedRow(){
-            var index;
-            var table = document.getElementById("table");
-            for(var i=1; i < table.rows.length; i++)
-            {
-                table.rows[i].onclick= function()
-                {
-                    if(typeof index !== "undefined"){
-                        table.rows[index].classList.toggle("selected");
-                    }
-                    
-                    index = this.rowIndex;
-                        this.classList.toggle("selected");
 
-                };
-                
-            }
-                
-            }
+<head>
+    <title> parameterpage </title>
+    <link rel="stylesheet" type="text/css" href="parameterpage.css">
 
-            getSelectedRow();
-            
-            
-            function updown(direction)
-            {
-                var rows = document.getElementById("table").rows,
-                    parent = rows[index].parentNode;
-                 if(direction === "up")
-                 {
-                     if(index > 1){
-                        parent.insertBefore(rows[index],rows[index - 1]);
-                    index--;
-                    }
-                 }
-                 
-                 if(direction === "down")
-                 {
-                     if(index < rows.length -1){
-                        parent.insertBefore(rows[index + 1],rows[index]);
-                    index++;
-                    }
-                 }
-            }
-        </script>
-    </head>
-    <body>
 
-        Parameter:<input id="pname" type="text" name="parametername"/><br><br>
-        SubParameter1:<input id="spname" type="text" name="subparametername"/><br><br>
-        SubParameter2:<input id="aname" type="text" name="actionstakenname"/><br><br>
-        
-        <button style="background:rgb(129, 129, 201)" onclick="addRow();">ADD</button><br><br>
+    <script>
+        function addRow() {
+            var parametername = document.getElementById('pname').value;
+            // var subparametername= document.getElementById('spname').value;
+            // var actionstakenname= document.getElementById('aname').value;
 
-        <table border="1">
-            <tr>
-                <th> Parameters</th>
-                <th> Sub Parameter1</th>
-                <th> Sub Parameter2 </th>
-            </tr>
-            <tr>
-                <td>color</td>
-                <td>pixel</td>
-                <td>dpi</td>
-            </tr>
-            <tr>
+            var ptable = document.getElementsByTagName("table")[0];
+
+            var newRow = ptable.insertRow(ptable.rows.length);
+
+            var cel1 = newRow.insertCell(0);
+            // var cel2=newRow.insertCell(1);
+            // var cel3= newRow.insertCell(2);
+
+            cel1.innerHTML = parametername;
+            // cel2.innerHTML=subparametername;
+            // cel3.innerHTML=actionstakenname;
+        }
+
+        function addRow1() {
+            var objectname = document.getElementById('oname').value;
+            // var subparametername= document.getElementById('spname').value;
+            // var actionstakenname= document.getElementById('aname').value;
+
+            var otable = document.getElementsByTagName("table")[0];
+
+            var newRow1 = otable.insertRow(otable.rows.length);
+
+            var cel1 = newRow1.insertCell(0);
+            // var cel2=newRow.insertCell(1);
+            // var cel3= newRow.insertCell(2);
+
+            cel1.innerHTML = objectname;
+            // cel2.innerHTML=subparametername;
+            // cel3.innerHTML=actionstakenname;
+        }
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+    Add parameter:<input id="pname" type="text" name="parametername"/><br><br>
+    <!-- Add Object:<input id="spname" type="text" name="subparametername"/><br><br>
+        SubParameter2:<input id="aname" type="text" name="actionstakenname"/><br><br> -->
+
+    <button style="background:rgb(129, 129, 201)" onclick="addRow();">ADD</button><br><br>
+
+    Add Object:<input id="oname" type="text" name="objectname" /><br><br>
+    <!-- Add Object:<input id="spname" type="text" name="subparametername"/><br><br>
+        SubParameter2:<input id="aname" type="text" name="actionstakenname"/><br><br> -->
+
+    <button style="background:rgb(129, 129, 201)" onclick="addRow1();">ADD</button><br><br>
+
+    <table border="1">
+        <tr>
+            <th> Parameters</th>
+            <!-- <th> Sub Parameter1</th>
+                <th> Sub Parameter2 </th> -->
+        </tr>
+        <tr>
+            <td>color</td>
+            <!-- <td>pixel</td>
+                <td>dpi</td> -->
+        </tr>
+        <!-- <tr>
                 <td>Size</td>
                 <td>height</td>
                 <td>width</td>
-            </tr>
-        </table>
+            </tr> -->
+    </table>
 
-        <button id="uparrow;" onclick="upNdown('up');">&ShortUpArrow;</button>
-        <button id="downarrow;" onclick="upNdown('down');">&ShortDownArrow;</button>
-
-
-    </body>
+    <table border="1">
+        <tr>
+            <th> Objects</th>
+            <!-- <th> Sub Parameter1</th>
+                <th> Sub Parameter2 </th> -->
+        </tr>
+        <tr>
+            <td>Object1</td>
+            <!-- <td>pixel</td>
+                <td>dpi</td> -->
+        </tr>
+        <!-- <tr>
+                <td>Size</td>
+                <td>height</td>
+                <td>width</td>
+            </tr> -->
+    </table>
+</body>
 </html>
