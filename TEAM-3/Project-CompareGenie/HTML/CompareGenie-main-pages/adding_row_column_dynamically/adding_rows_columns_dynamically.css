@@ -6,7 +6,8 @@
 
 html body{
     margin: auto; 
-    font-family: Roboto; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
   
 }
 
@@ -20,7 +21,7 @@ html body{
 
 }
 
-.top{
+.main{
     background-color:#FCFCFC;
     display: flex;
     align-items: center;
@@ -30,22 +31,22 @@ html body{
     padding: 3%;
 }
 
-.middle{
+.central{
     background-color: #FFFFFF;
     padding: 3%;
 }
 
-.middle p{
+.central p{
     align-items: center;
     font-size: 16px;
 }
 
-.bottom input[type="text"]{
+.footer input[type="text"]{
     padding: 5px;
     
 }
 
-.bottom{
+.footer{
     background-color:#FCFCFC;
     display: flex;
     align-items: center;
@@ -53,7 +54,7 @@ html body{
     padding: 4%;
 }
 
-.bottom button[type="button"]{
+.footer button[type="button"]{
     border-radius: 29px;
     background-color: rgb(16, 20, 221);
     color: #FFFFFF;
@@ -65,14 +66,14 @@ html body{
     float: right;
 }
 
-.bottom a{
+.footer a{
     letter-spacing: 1.2px;
     color: #5A5A5A;
     font-size: 10px;
     font-weight: bold;
 }
 
-.bottom span{
+.footer span{
     letter-spacing: 1px;
     color: #5A5A5A;
     font-size: 10px;

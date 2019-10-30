@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> dynamic table with displaying values entered </title>
+    <link rel="stylesheet" type="text/css" href="display_text.css">
+</head>
+
+<body>
+
+    Add parameter:<input id="pname" type="text" name="parametername" /><br><br>
+
+    Add Object:<input id="oname" type="text" name="objectname" /><br><br>
+    <button id="entry" style="background:rgb(129, 129, 201)">ADD</button><br><br>
+
+    <button onclick="addColumn('dynamictable')" id="objectentry" style="background:rgb(129, 129, 201)">Add Object</button><br><br>
+
+    <table id="dynamictable">
+        <thead>
+        <tr>
+            <th> Parameters</th>
+
+        </tr>
+        </thead>
+        <!-- <tr>
+            <td>color</td>
+        </tr> -->
+
+    </table>
+
+    <script>
+        var row = 1;
+        var entry = document.getElementById("entry");
+        entry.addEventListener("click", displayDetails);
+
+        function displayDetails() {
+            var pname = document.getElementById("pname").value;
+
+
+            var dynamictable = document.getElementById("dynamictable");
+            var newRow = dynamictable.insertRow(row);
+            var cell1 = newRow.insertCell(0);
+            // var cell2=newRow.insertCell(1);
+
+
+            cell1.innerHTML = pname;
+            // cell2.innerHTML=oname;
+            row++;
+        }
+
+        // var column = 1;
+        // var objectentry = document.getElementById("objectentry");
+        // objectentry.addEventListener("click", displayobjects);
+
+        // function displayobjects() {
+        //     var oname = document.getElementById("oname").value;
+        //     var dynamictable = document.getElementById("dynamictable");
+        //     var newColumn = dynamictable.insertColumn(column);
+        //     var cell1 = newColumn.insertCell(2);
+        //     // var cell2=newRow.insertCell(1);
+
+
+        //     cell1.innerHTML = oname;
+        //     // cell2.innerHTML=oname;
+        //     column++;
+        // }
+
+        function addColumn(tblId)
+{
+	var tblHeadObj = document.getElementById(tblId).tHead;
+	for (var h=0; h<tblHeadObj.rows.length; h++) {
+		var newTH = document.createElement('th');
+		tblHeadObj.rows[h].appendChild(newTH);
+		newTH.innerHTML = '[th] row:' + h + ', cell: ' + (tblHeadObj.rows[h].cells.length - 1)
+	}
+
+	// var tblBodyObj = document.getElementById(tblId).tBodies[0];
+	// for (var i=0; i<tblBodyObj.rows.length; i++) {
+	// 	var newCell = tblBodyObj.rows[i].insertCell(-1);
+	// 	newCell.innerHTML = '[td] row:' + i + ', cell: ' + (tblBodyObj.rows[i].cells.length - 1)
+	// }
+}
+
+    </script>
+</body>
+
+
+</html>

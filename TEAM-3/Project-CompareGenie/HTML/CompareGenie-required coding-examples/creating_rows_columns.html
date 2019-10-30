@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> dynamic table </title>
+    <link rel="stylesheet" type="text/css" href="creating_rows_columns.css">
+</head>
+
+<body>
+
+    Add parameter:<input id="pname" type="text" name="parametername" /><br><br>
+    <button style="background:rgb(129, 129, 201)" onclick="appendRow();">ADD</button><br><br>
+    Add Object:<input id="oname" type="text" name="objectname" /><br><br>
+    <button style="background:rgb(129, 129, 201)" onclick="appendColumn();">ADD</button><br><br>
+
+    <table border="1" id="dynamictable">
+        <tr>
+            <th> Parameters</th>
+            <th> Objects</th>
+        </tr>
+        <!-- <tr>
+            <td>color</td>
+        </tr> -->
+
+    </table>
+
+    <script>
+        function appendRow() {
+            var tbl = document.getElementById('dynamictable'), // table reference
+                row = tbl.insertRow(tbl.rows.length),      // append table row
+                i;
+            // insert table cells to the new row
+            for (i = 0; i < tbl.rows[0].cells.length; i++) {
+                createCell(row.insertCell(i), i, 'row');
+            }
+        }
+
+        // create DIV element and append to the table cell
+        function createCell(cell, text, style) {
+            var div = document.createElement('div'), // create DIV element
+                txt = document.createTextNode(text); // create text node
+            div.appendChild(txt);                    // append text node to the DIV
+            div.setAttribute('class', style);        // set DIV class attribute
+            div.setAttribute('className', style);    // set DIV class attribute for IE (?!)
+            cell.appendChild(div);                   // append DIV to the table cell
+        }
+        // append column to the HTML table
+        function appendColumn() {
+            var tbl = document.getElementById('dynamictable'), // table reference
+                i;
+            // open loop for each row and append cell
+            for (i = 0; i < tbl.rows.length; i++) {
+                createCell(tbl.rows[i].insertCell(tbl.rows[i].cells.length), i, 'col');
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
