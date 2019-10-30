@@ -3,6 +3,11 @@
 
 <head>
     <title>dynamic table</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" rel="stylesheet">
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="adding_rows_columns_dynamically.css" />
 </head>
@@ -26,7 +31,7 @@
             <b>Comparison Sheet</b></p>
     </div>
     </div>
-    <div style="min-height: 9vh"></div>
+
     <div class="main-container">
 
         <form>
@@ -61,8 +66,8 @@
             </div>
 
             <div class="central">
-                <p style="padding: 5px">Enter Parameter</p>
-                <input type="text" id="parameter" style="padding: 10px">
+                <p style="padding: 2px">Enter Parameter</p>
+                <input type="text" id="parameter" style="padding: 5px">
                 <div style="min-height: 5vh"></div>
             </div>
 
@@ -81,14 +86,14 @@
             </div>
 
             <div class="central">
-                <p style="padding: 5px"> object</p>
-                <input type="text" id="product" style="padding: 10px">
+                <p style="padding: 2px"> object</p>
+                <input type="text" id="product" style="padding: 5px">
                 <div style="min-height: 5vh"></div>
             </div>
 
-            <div class="bottom">
+            <div class="footer">
 
-                <div><button type="button" id="productAdd" style="padding-left: 10px"
+                <div><button type="button" id="productAdd" style="padding-left: 5px"
                         onclick="addColumn('display')">ADD</button></div>
             </div>
 
@@ -96,53 +101,75 @@
         <div style="min-height: 8vh"></div>
     </div>
 
+    <script>
+        $('tbody').sortable();
+        // $('#defaultTable').dragtable();
+        //         $('#localStorageTable').dragtable({ 
+        //     persistState: function(table) { 
+        //       if (!window.sessionStorage) return; 
+        //       var ss = window.sessionStorage; 
+        //       table.el.find('th').each(function(i) { 
+        //         if(this.id != '') {table.sortOrder[this.id]=i;} 
+        //       }); 
+        //       ss.setItem('tableorder',JSON.stringify(table.sortOrder)); 
+        //     }, 
+        //     restoreState: eval('(' + window.sessionStorage.getItem('tableorder') + ')') 
+        // }); 
 
-</body>
-<script>
-    function addColumn(tblId) {
-        var tblHeadObj = document.getElementById(tblId).tHead;
-        for (var h = 0; h < tblHeadObj.rows.length; h++) {
-            var newTH = document.createElement('th');
-            tblHeadObj.rows[h].appendChild(newTH);
-            newTH.innerHTML = 'Object'
+        function addColumn(tblId) {
+            var tblHeadObj = document.getElementById(tblId).tHead;
+            for (var h = 0; h < tblHeadObj.rows.length; h++) {
+                var newTH = document.createElement('th');
+                tblHeadObj.rows[h].appendChild(newTH);
+                newTH.innerHTML = 'Object'
+            }
+
+        }
+        var entry = document.getElementById("add");
+        entry.addEventListener("click", displayDetails);
+
+        function displayDetails() {
+            var addParameter1 = document.getElementById("parameter").value;
+
+            var display = document.getElementById("display");
+            var newRow = display.insertRow(display.rows.length).outerHTML = ("<tr data-name='" + addParameter1 + "'><td>" + addParameter1 + "</td><button class='btn btn-info btn-xs btn-edit'>Edit</button><button class='btn btn-danger btn-xs btn-delete' onclick='delete_row(" + newRow + ")' id='delete'>Delete</button></td><td></td></tr>");
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+
+            cell1.innerHTML = addParameter1;
+            cell2.insertHTML = addParameter2;
+            cell3.insertHTML = addParameter3;
+
+        }
+        function delete_row() {
+            document.getElementById("" + newRow + "").outerHTML = "";
+
         }
 
-    }
-    var entry = document.getElementById("add");
-    entry.addEventListener("click", displayDetails);
+        function Edit() {
+            document.getElementById("" + newRow + "").outerHTML = "";
 
-    function displayDetails() {
-        var addParameter1 = document.getElementById("parameter").value;
 
-        var display = document.getElementById("display");
-        var newRow = display.insertRow(display.rows.length).outerHTML = ("<tr data-name='" + addParameter1 + "'><td>" + addParameter1 + "</td><button class='btn btn-info btn-xs btn-edit'>Edit</button><button class='btn btn-danger btn-xs btn-delete' onclick='delete_row(" + newRow + ")' id='delete'>Delete</button></td><td></td></tr>");
-        var cell1 = newRow.insertCell(0);
-        var cell2 = newRow.insertCell(1);
-        var cell3 = newRow.insertCell(2);
+        }
 
-        cell1.innerHTML = addParameter1;
-        cell2.insertHTML = addParameter1;
-        cell3.insertHTML = addParameter1;
+        document.getElementById("addParameter").addEventListener("click", function () {
+            document.querySelector(".add_Parameter_popup").style.display = "block";
+        })
+        document.getElementById("add").addEventListener("click", function () {
+            document.querySelector(".add_Parameter_popup").style.display = "none";
+        })
+        document.getElementById("addProduct").addEventListener("click", function () {
+            document.querySelector(".add_Product_popup").style.display = "block";
+        })
+        document.getElementById("productAdd").addEventListener("click", function () {
+            document.querySelector(".add_Product_popup").style.display = "none";
+        })
 
-    }
-    function delete_row() {
-        document.getElementById("" + newRow + "").outerHTML = "";
+    </script>
 
-    }
 
-    document.getElementById("addParameter").addEventListener("click", function () {
-        document.querySelector(".add_Parameter_popup").style.display = "block";
-    })
-    document.getElementById("add").addEventListener("click", function () {
-        document.querySelector(".add_Parameter_popup").style.display = "none";
-    })
-    document.getElementById("addProduct").addEventListener("click", function () {
-        document.querySelector(".add_Product_popup").style.display = "block";
-    })
-    document.getElementById("productAdd").addEventListener("click", function () {
-        document.querySelector(".add_Product_popup").style.display = "none";
-    })
-    
-</script>
+
+</body>
 
 </html>

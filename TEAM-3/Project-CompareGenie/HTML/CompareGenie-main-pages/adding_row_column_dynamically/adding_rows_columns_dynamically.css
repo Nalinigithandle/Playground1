@@ -11,6 +11,47 @@ html body{
   
 }
 
+#mainheader{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    margin:auto;
+    height:60px;
+    width:100%;
+    background:rgb(1, 65, 20);
+    box-shadow: 0px 0px 4px;
+}
+
+#left-box{
+    margin-left:2%;
+}
+
+#right-box{
+    width:13%;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-end;
+    margin-right:2%;
+    
+}
+
+#title{
+    margin:auto;
+    width:100%;
+    padding:2%;
+    background: rgb(189, 169, 169);
+}
+
+#comparisonsheet{
+    margin:auto;
+    width:100%;
+    margin-top:2%;
+    padding:1%;
+    background:gray;
+}
+
 .add_Parameter_popup{
     margin-top: 5%;
     border: 2px solid;
@@ -90,11 +131,12 @@ html body{
 } 
 
 .table{
-    margin-left:10% ;
+    margin:auto;
+    width:40%;
 }
 
 .main-container{
-    width: 50%;
+    width: 100%;
     margin: auto;
     border: 1px solid #d1d0d0;
     background-color:#F9F8F9;
@@ -107,43 +149,3 @@ html body{
     padding: 2%;
 }
 
-#mainheader{
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:space-between;
-    margin:auto;
-    height:60px;
-    width:100%;
-    background:rgb(1, 65, 20);
-    box-shadow: 0px 0px 4px;
-}
-
-#left-box{
-    margin-left:2%;
-}
-
-#right-box{
-    width:13%;
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:flex-end;
-    margin-right:2%;
-    
-}
-
-#title{
-    margin:auto;
-    width:100%;
-    padding:2%;
-    background: rgb(189, 169, 169);
-}
-
-#comparisonsheet{
-    margin:auto;
-    width:100%;
-    margin-top:2%;
-    padding:1%;
-    background:gray;
-}
