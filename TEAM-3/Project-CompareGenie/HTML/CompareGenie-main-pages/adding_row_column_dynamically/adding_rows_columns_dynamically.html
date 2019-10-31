@@ -35,7 +35,7 @@
     <div class="main-container">
 
         <form>
-            <table id="display" border="1" class="table">
+            <table class="table" id="dynamictable" border="1">
                 <thead>
                     <tr>
                         <th>Parameters<img src="../images/plus-icon.png" height="30" width="30" alt="plus image"
@@ -46,20 +46,16 @@
 
                     </tr>
                 </thead>
-                <tbody class="row_drag">
+                <tbody>
 
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <tr></tr>
                 </tbody>
 
             </table>
         </form>
-        <div class="add_Parameter_popup">
+        <div class="Parameter_popup">
 
-            <div class="main">
+            <div class="main_container">
                 <div>
                     <p><b>Add Parameter</b></p>
                 </div>
@@ -77,9 +73,9 @@
             </div>
 
         </div>
-        <div class="add_Product_popup">
+        <div class="object_popup">
 
-            <div class="main">
+            <div class="main_container">
                 <div>
                     <p><b>Add Object</b></p>
                 </div>
@@ -87,14 +83,14 @@
 
             <div class="central">
                 <p style="padding: 2px"> object</p>
-                <input type="text" id="product" style="padding: 5px">
+                <input type="text" id="product">
                 <div style="min-height: 7vh"></div>
             </div>
 
             <div class="footer">
 
-                <div><button type="button" id="productAdd" style="padding-left: 5px"
-                        onclick="addColumn('display')">ADD</button></div>
+                <div><button type="button" id="productAdd" style="padding: 2px"
+                        onclick="addColumn('dynamictable')">ADD</button></div>
             </div>
 
         </div>
@@ -102,6 +98,26 @@
     </div>
 
     <script>
+        document.getElementById("addProduct").addEventListener("click", function () {
+            document.querySelector(".object_popup").style.display = "block";
+        })
+
+        document.getElementById("addParameter").addEventListener("click", function () {
+            document.querySelector(".Parameter_popup").style.display = "block";
+        })
+
+
+
+        document.getElementById("productAdd").addEventListener("click", function () {
+            document.querySelector(".object_popup").style.display = "none";
+        })
+
+        document.getElementById("add").addEventListener("click", function () {
+            document.querySelector(".Parameter_popup").style.display = "none";
+        })
+
+
+
         $('tbody').sortable();
         // $('#defaultTable').dragtable();
         //         $('#localStorageTable').dragtable({ 
@@ -116,12 +132,14 @@
         //     restoreState: eval('(' + window.sessionStorage.getItem('tableorder') + ')') 
         // }); 
 
+
         function addColumn(tblId) {
+            var addProduct = document.getElementById("product").value;
             var tblHeadObj = document.getElementById(tblId).tHead;
             for (var h = 0; h < tblHeadObj.rows.length; h++) {
                 var newTH = document.createElement('th');
                 tblHeadObj.rows[h].appendChild(newTH);
-                newTH.innerHTML = 'Object'
+                newTH.innerHTML = addproduct;
             }
 
         }
@@ -131,13 +149,13 @@
         function displayDetails() {
             var addParameter1 = document.getElementById("parameter").value;
 
-            var display = document.getElementById("display");
-            var newRow = display.insertRow(display.rows.length).outerHTML = ("<tr data-name='" + addParameter1 + "'><td>" + addParameter1 + "</td><button class='btn btn-info btn-xs btn-edit'>Edit</button><button class='btn btn-danger btn-xs btn-delete' onclick='delete_row(" + newRow + ")' id='delete'>Delete</button></td><td></td></tr>");
+            var display = document.getElementById("dynamictable");
+            var newRow = display.insertRow(display.rows.length).outerHTML = ("<tr data-name='" + addParameter1 + "'><td>" + addParameter1 + "</td><button class='btn btn-danger btn-xs btn-delete' onclick='delete_row(" + newRow + ")' id='delete'>Delete</button></td><td></td></tr>");
             var cell1 = newRow.insertCell(0);
             var cell2 = newRow.insertCell(1);
             var cell3 = newRow.insertCell(2);
 
-            cell1.innerHTML = addParameter1;
+            cell1.insertHTML = addParameter1;
             cell2.insertHTML = addParameter2;
             cell3.insertHTML = addParameter3;
 
@@ -146,29 +164,10 @@
             document.getElementById("" + newRow + "").outerHTML = "";
 
         }
-
-        function Edit() {
-            document.getElementById("" + newRow + "").outerHTML = "";
-
-
-        }
-
-        document.getElementById("addParameter").addEventListener("click", function () {
-            document.querySelector(".add_Parameter_popup").style.display = "block";
-        })
-        document.getElementById("add").addEventListener("click", function () {
-            document.querySelector(".add_Parameter_popup").style.display = "none";
-        })
-        document.getElementById("addProduct").addEventListener("click", function () {
-            document.querySelector(".add_Product_popup").style.display = "block";
-        })
-        document.getElementById("productAdd").addEventListener("click", function () {
-            document.querySelector(".add_Product_popup").style.display = "none";
-        })
-
     </script>
 
-
+    <a href="../page_2/page2.html"><button
+            style="margin-top:15%; background:blue; color:aliceblue; padding:2px; float:right; margin-right:5%;">Back</button></a>
 
 </body>
 

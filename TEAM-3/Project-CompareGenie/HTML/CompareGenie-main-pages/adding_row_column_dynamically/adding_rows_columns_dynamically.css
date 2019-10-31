@@ -52,7 +52,7 @@ html body{
     background:gray;
 }
 
-.add_Parameter_popup{
+.Parameter_popup{
     margin-top: 5%;
     border: 2px solid;
     width: 40%;
@@ -62,7 +62,7 @@ html body{
 
 }
 
-.main{
+.main_container{
     background-color:#FCFCFC;
     display: flex;
     align-items: center;
@@ -75,11 +75,6 @@ html body{
 .central{
     background-color: #FFFFFF;
     padding: 3%;
-}
-
-.central p{
-    align-items: center;
-    font-size: 16px;
 }
 
 .footer input[type="text"]{
@@ -107,22 +102,9 @@ html body{
     float: right;
 }
 
-.footer a{
-    letter-spacing: 1.2px;
-    color: #5A5A5A;
-    font-size: 10px;
-    font-weight: bold;
-}
 
-.footer span{
-    letter-spacing: 1px;
-    color: #5A5A5A;
-    font-size: 10px;
-    padding-top:2%;
-   
-}
 
-.add_Product_popup{
+.object_popup{
     border: 2px solid;
     width: 40%;
     margin: auto;
